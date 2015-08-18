@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en" class="bg-light-blue">
+<head>  
+  <meta charset="utf-8" />
+  <title>面条校园 | 简历入口</title>
+  <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+  <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+  <link rel="stylesheet" href="css/animate.css" type="text/css" />
+  <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/icon.css" type="text/css" />
+  <link rel="stylesheet" href="css/font.css" type="text/css" />
+  <link rel="stylesheet" href="css/app.css" type="text/css" />  
+    <!--[if lt IE 9]>
+    <script src="js/ie/html5shiv.js"></script>
+    <script src="js/ie/respond.min.js"></script>
+    <script src="js/ie/excanvas.js"></script>
+    <![endif]-->
+    <style type="text/css">
+      #enter-code{
+        width: 264px;
+        height: 264px;
+        margin-top: 110px;
+        margin-left: 98px;
+      }
+
+
+
+      .bg-light-blue{
+       background-color:#3497da;
+     }
+
+     .ma-code-container{
+      width: 350px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 26px;
+
+
+    }
+
+    .ma-code-item{
+      width:16.66%;
+      float: left;
+    }
+
+    .ma-img-back{
+      position:relative; 
+      z-index:-10;
+    }
+
+
+
+  </style>
+</head>
+<body class="">
+  <section id="content" >
+    <div class="row m-n">
+      <!--head  -->
+      <div class="col-sm-10 col-sm-offset-1">
+        <div class="text-left m-b-xl">
+          <h1 class="text-white">面条校园.简历</h1>
+        </div>
+      </div>
+      <!--head  -->
+
+      <!--middle  -->
+      <div class="row m-n">
+
+
+        <!--left-->
+        <div id="enterScan" class="text-center col-md-offset-1 col-md-5 m-b-xl" style="margin-bottom:100px;" >
+          <div>
+            <img class="m-b-lg " id="enter-code" src="assets/images/enter-code-example.jpg" alt="二维码" />
+          </div>
+          <img class="m-t-lg m-b-xl ma-img-back" style="margin-top:-374px; " src="assets/images/enter-scan.png"/>
+          <h3 style="color: #FFF;margin-top:70px;">扫描二维码登录</h3>
+        </div>
+        <!--left-->
+
+        <!--right -->
+        <div id="enterCode" class="text-center col-md-5 m-b-xl " >
+          <div class="ma-code-container ">
+            <h1 class="ma-code-item">3</h1>
+            <h1 class="ma-code-item">8</h1>
+            <h1 class="ma-code-item">3</h1>
+            <h1 class="ma-code-item">9</h1>
+            <h1 class="ma-code-item">3</h1>
+            <h1 class="ma-code-item">0</h1>
+          </div>
+          <img class="m-b-lg ma-img-back" style="margin-top:-95px; " src="assets/images/enter-code.png" alt="识别码" />
+          <h3 style="color: #FFF;margin-top:50px;">识别码登录</h3>
+        </div>
+        <!--right -->
+      </div>
+      <!--middle  -->
+
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer id="footer" >
+    <div class="text-center padder clearfix" >
+      <p style="color:#FFF;">
+        <small>Copyright &copy; 2014 591mian.com 版权所有 | 苏ICP备14002131号-4</small>
+      </p>
+    </div>
+  </footer>
+  <!-- / footer -->
+
+  <script src="js/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="js/bootstrap.js"></script>
+  <!-- App -->
+  <script src="js/app.js"></script>  
+  <script src="js/slimscroll/jquery.slimscroll.min.js"></script>
+  <script src="js/app.plugin.js"></script>
+
+  <script type="text/javascript">
+// 实现隐藏显示的动画效果
+  $("#enterCode").css({ opacity: .4 });
+  $("#enterScan").hover(    
+    function () { 
+      $("#enterCode").stop(true).animate({ opacity: .4 }, 500);    
+      $(this).stop(true).animate({ opacity: 1 }, 500);    
+    }    
+  );  
+
+  $("#enterCode").hover(    
+    function () {    
+      $("#enterScan").stop(true).animate({ opacity: .4 }, 500);
+      $(this).stop(true).animate({ opacity: 1 }, 500);    
+    }   
+  );
+  </script>
+
+
+
+
+
+</body>
+</html>

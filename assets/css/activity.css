@@ -1,0 +1,59 @@
+.activity{
+	width: 100%;
+	height: 101px;
+	background:#2d1342 url(../images/activity/bg.jpg) center center no-repeat;
+}
+.activity_end{
+	width: 100%;
+	height: 101px;
+	background:#2d1342 url(../images/activity/end.jpg) center center no-repeat;
+}
+.activity_main{
+	width: 1036px;
+	height: 101px;
+	margin:0 auto;
+	position: relative;
+	overflow:hidden;
+	display:block;
+}
+.activity_logo{
+    float:left;
+	width: 250px;
+	height: 101px;
+	background:url(../images/activity/logo.png) center center no-repeat;
+}
+.activity_time{
+	width: 476px;
+	height: 101px;
+	display: inline-block;
+	background:url(../images/activity/time.png) 0 top no-repeat;
+}
+.activity_calendar{
+	width: 301px;
+	height: 83px;
+	float: right;
+	background:url(../images/activity/ac_day.png) 0 18px no-repeat;
+	position: relative;
+}
+.noday_activity_calendar{
+	width: 301px;
+	height: 83px;
+	float: right;
+	background:url(../images/activity/ac_hour.png) 0 18px no-repeat;
+	position: relative;
+}
+.activity_calendar span,.noday_activity_calendar span{
+	color: #fff;
+	font-size: 50px;
+	position: absolute;
+	top: 38px;
+}
+#activity_day{
+	left: 7px;
+}
+#activity_hour{
+	left: 105px;
+}
+#activity_minute{
+	left: 212px;
+}

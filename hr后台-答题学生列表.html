@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en" class="app">
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Scale | Web Application</title>
+  <meta name="description"
+        content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+  <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
+  <link rel="stylesheet" href="css/animate.css" type="text/css"/>
+  <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css"/>
+  <link rel="stylesheet" href="css/icon.css" type="text/css"/>
+  <link rel="stylesheet" href="css/font.css" type="text/css"/>
+  <link rel="stylesheet" href="css/app.css" type="text/css"/>
+  <!-- BEGIN THEME STYLES -->
+  <link rel="stylesheet" href="assets/css/noodles.css" type="text/css"/>
+  <!-- END THEME STYLES -->
+
+  <!--[if lt IE 9]>
+  <script src="js/ie/html5shiv.js"></script>
+  <script src="js/ie/respond.min.js"></script>
+  <script src="js/ie/excanvas.js"></script>
+  <![endif]-->
+
+  <!-- BEGIN CUSTOM STYLES -->
+  <style type="text/css">
+      .orange-font {
+        color: #E65C16;
+        font-size: larger;
+      }
+
+      .header-font {
+        color: #ffffff;
+      }
+
+      .cut-line {
+        width: 1px;
+        height: 57px;
+        background-color: #DADADA;
+        float: right;
+        margin-right: -10px;
+      }
+
+      .iconfont {
+        font-family: "iconfont" !important;
+        font-size: 16px;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-stroke-width: 0.2px;
+        -moz-osx-font-smoothing: grayscale;
+      }
+  </style>
+  <!-- END CUSTOM STYLES -->
+
+</head>
+<body class="container">
+    <section class="vbox">
+        <header class="bg-danger header header-md navbar navbar-fixed-top-xs box-shadow">
+            <div class="navbar-header aside-md dk">
+                <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen,open" data-target="#nav,html">
+                  <i class="fa fa-bars"></i>
+                </a>
+                <a href="#" class="navbar-brand">
+                  <span class="hidden-nav-xs">面条校园</span>
+                </a>
+                <a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".user">
+                  <i class="fa fa-cog"></i>
+                </a>
+            </div>
+            <ul class="nav navbar-nav active navbar-left m-n hidden-xs ">
+                <li>
+                    <a href="#">简历</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-left m-n hidden-xs">
+                <li class="">
+                    <a href="笔试列表.html">在线考试</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-left m-n hidden-xs">
+                <li class="">
+                    <a href="#">更多</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right m-n hidden-xs nav-user user">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <span class="thumb-sm avatar pull-left">
+                      <img src="images/a0.png" alt="...">
+                    </span>
+                      John.Smith <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu animated fadeInRight">
+                        <li>
+                            <span class="arrow top"></span>
+                            <a href="#">简历导出</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#" data-toggle="ajaxModal">登出</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </header>
+
+        <section>
+        <section class="hbox stretch">
+          <section id="content">
+            <!-- BEGIN CONTENT -->
+            <section class="vbox">
+              <section class="scrollable wrapper">
+                <div class="row">
+                    <div class="col-lg-12" style="margin-bottom: -20px">
+                        <div class="panel text-center" style="background-color: #262734;" >
+                            <div class="row">
+
+
+                                <div class="col-lg-1 m-t-sm">
+                                    <a href="#">
+                                        <h4 class="orange-font m-t-md m-l-md">返回</h4>
+                                    </a>
+                                </div>
+
+                                <div class="col-lg-6 col-lg-offset-2  m-t-sm">
+                                    <h3  class="header-font">Java开发工程师</h3>
+                                </div>
+
+
+                                <div class="bg-danger pull-right" style="margin-right: 14px">
+                                    <ul class="nav navbar-nav">
+                                        <li class="">
+                                            <a href="#"  style="width: 100px;!important;display: inline-block">
+                                                <p class="font-bold">4</p>
+                                                <p class="header-font">待查看</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="bg-danger pull-right">
+                                    <ul class="nav navbar-nav">
+                                        <li class="">
+                                            <a href="#"   style="width: 100px;!important;display: inline-block;">
+                                                <p class="header-font font-bold">253</p>
+                                                <p class="header-font">总参加人数</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12">
+                      <section class="panel text-center" >
+
+                      <div class="panel-body text-center" style="border-bottom:3px solid #E65C16;">
+                        <div class="row">
+                          <div class="col-lg-3 ">
+                            <div class="cut-line"></div>
+                            <p class="orange-font text-lg ">30min</p>
+                            <p class="text-black">答题时间</p>
+                          </div>
+                          <div class="col-lg-3">
+                            <div class="cut-line"></div>
+                            <p class="orange-font text-lg ">60分</p>
+                            <p class="text-black">推荐通过分数</p>
+                          </div>
+                          <div class="col-lg-3 ">
+                            <div class="cut-line"></div>
+                            <p class="orange-font text-lg">Java开发工程师</p>
+                            <p class="text-black">当前使用试卷</p>
+                          </div>
+
+                          <div class="col-lg-3  m-t-md text-lg">
+                            <a href="#">查看/更换试卷</a>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+
+
+
+                </div>
+
+                <section class="panel panel-default">
+                  <header class="panel-heading">简历库</header>
+                  <div class="row wrapper">
+                    <div class="col-lg-offset-1  col-sm-8 m-b-xs">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-default">下载</button>
+                        <button type="button" class="btn btn-default">删除</button>
+                        <button type="button" data-toggle="dropdown" class="dropdown-toggle btn btn-default">移动</button>
+                        <section class="dropdown-menu aside-lg bg-white on animated fadeInLeft">
+                          <div class="row m-l-none m-r-none m-t m-b text-center">
+                            <div class="col-xs-4">
+                              <div class="padder-v">
+                                <a href="#">
+                                    <span class="m-b-xs block">
+                                      <i class="i i-mail i-2x text-primary-lt"></i>
+                                    </span>
+                                  <small class="text-muted">分组一</small>
+                                </a>
+                              </div>
+                            </div>
+
+                            <div class="col-xs-4">
+                              <div class="padder-v">
+                                <a href="#">
+                                    <span class="m-b-xs block">
+                                      <i class="i i-map i-2x text-success-lt"></i>
+                                    </span>
+                                  <small class="text-muted">分组二</small>
+                                </a>
+                              </div>
+                            </div>
+                            <div class="col-xs-4">
+                              <div class="padder-v">
+                                <a href="#">
+                                    <span class="m-b-xs block">
+                                      <i class="i i-paperplane i-2x text-info-lt"></i>
+                                    </span>
+                                  <small class="text-muted">分组三</small>
+                                </a>
+                              </div>
+                            </div>
+                            <div class="col-xs-4">
+                              <div class="padder-v">
+                                <a href="#">
+                                    <span class="m-b-xs block">
+                                      <i class="i i-images i-2x text-muted"></i>
+                                    </span>
+                                  <small class="text-muted">分组四</small>
+                                </a>
+                              </div>
+                            </div>
+
+                            <div class="col-xs-4">
+                              <div class="padder-v">
+                                <a href="#">
+                                    <span class="m-b-xs block">
+                                      <i class="i i-calendar i-2x text-danger-lt"></i>
+                                    </span>
+                                  <small class="text-muted">分组五</small>
+                                </a>
+                              </div>
+                            </div>
+                            <div class="col-xs-4">
+                              <div class="padder-v">
+                                <a href="#">
+                                    <span class="m-b-xs block">
+                                      <i class="i i-clock i-2x text-warning-lter"></i>
+                                    </span>
+                                  <small class="text-muted">分组六</small>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </section>
+                        <a href="#"><button type="button" class="btn btn-default">邮件回复</button></a>
+                      </div>
+                    </div>
+                    <div class="col-lg-offset-1 col-sm-2">
+                      <div class="input-group">
+                        <input type="text" class="input-sm form-control rounded" placeholder="搜索">
+                            <span class="input-group-btn">
+                              <button class="btn btn-sm btn-default rounded" type="button">走你！</button>
+                            </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="table-responsive">
+                    <table class="table   b-t b-light table-hover">
+                      <thead>
+                      <tr class="">
+                        <th width="20"><label class="checkbox m-l m-t-none m-b-none i-checks"><input type="checkbox"><i></i></label></th>
+                        <th>头像</th>
+                        <th>姓名</th>
+                        <th>学校</th>
+                        <th>专业</th>
+                        <th colspan="3" width="20">操作</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+
+                      <tr>
+                        <td><label class="checkbox m-l m-t-none m-b-none i-checks"><input type="checkbox" name="post[]"><i></i></label></td>
+                        <td>
+                              <span class="thumb-sm avatar">
+                                <img src="images/a0.png" alt="...">
+                              </span>
+                        </td>
+                        <td style="line-height: 34px"><a href="#">马晨</a></td>
+                        <td style="line-height: 34px">北京大学</td>
+                        <td style="line-height: 34px">计算机科学与技术</td>
+                        <td style="line-height: 34px;width: 30px">
+                          <a href="#"><i class="iconfont" data-toggle="tooltip" data-original-title="下载">&#xe603;</i></a>
+                        </td>
+
+                        <td style="line-height: 34px;width: 30px">
+                          <a href="#"><i class="iconfont" data-toggle="tooltip" data-original-title="删除">&#xe602;</i></a>
+                        </td>
+
+                        <td style="line-height: 34px;width: 30px">
+                          <a href="#" data-toggle="dropdown"  class="iconfont dropdown-toggle">
+                            <i class="iconfont" data-toggle="tooltip" data-original-title="移动">&#xe60a;</i></a>
+                          <section class="dropdown-menu aside-lg bg-white animated fadeInLeft" style="margin-left: -253px;">
+                            <div class="row m-l-none m-r-none m-t m-b text-center">
+                              <div class="col-xs-4">
+                                <div class="padder-v">
+                                  <a href="#">
+                                      <span class="m-b-xs block">
+                                        <i class="i i-mail i-2x text-primary-lt"></i>
+                                      </span>
+                                    <small class="text-muted">分组一</small>
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="col-xs-4">
+                                <div class="padder-v">
+                                  <a href="#">
+                                      <span class="m-b-xs block">
+                                        <i class="i i-map i-2x text-success-lt"></i>
+                                      </span>
+                                    <small class="text-muted">分组二</small>
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="col-xs-4">
+                                <div class="padder-v">
+                                  <a href="#">
+                                      <span class="m-b-xs block">
+                                        <i class="i i-paperplane i-2x text-info-lt"></i>
+                                      </span>
+                                    <small class="text-muted">分组三</small>
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="col-xs-4">
+                                <div class="padder-v">
+                                  <a href="#">
+                                      <span class="m-b-xs block">
+                                        <i class="i i-images i-2x text-muted"></i>
+                                      </span>
+                                    <small class="text-muted">分组四</small>
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="col-xs-4">
+                                <div class="padder-v">
+                                  <a href="#">
+                                      <span class="m-b-xs block">
+                                        <i class="i i-calendar i-2x text-danger-lt"></i>
+                                      </span>
+                                    <small class="text-muted">分组五</small>
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="col-xs-4">
+                                <div class="padder-v">
+                                  <a href="#">
+                                      <span class="m-b-xs block">
+                                        <i class="i i-clock i-2x text-warning-lter"></i>
+                                      </span>
+                                    <small class="text-muted">分组六</small>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><label class="checkbox m-l m-t-none m-b-none i-checks"><input type="checkbox" name="post[]"><i></i></label></td>
+                        <td>
+                              <span class="thumb-sm avatar">
+                                <img src="images/a0.png" alt="...">
+                              </span>
+                        </td>
+                        <td style="line-height: 34px"><a href="#">马晨</a></td>
+                        <td style="line-height: 34px">北京大学</td>
+                        <td style="line-height: 34px">计算机科学与技术</td>
+                        <td style="line-height: 34px">
+                          <a href="#"><i class="iconfont" data-toggle="tooltip" data-original-title="下载">&#xe603;</i></a>
+                        </td>
+
+                        <td style="line-height: 34px">
+                          <a href="#"><i class="iconfont" data-toggle="tooltip" data-original-title="删除">&#xe602;</i></a>
+                        </td>
+
+                        <td style="line-height: 34px">
+                          <a href="#" data-toggle="dropdown"  class="iconfont dropdown-toggle">
+                            <i class="iconfont" data-toggle="tooltip" data-original-title="移动">&#xe60a;</i></a>
+                          <section class="dropdown-menu aside-lg bg-white animated fadeInLeft" style="margin-left: -253px;">
+                            <div class="row m-l-none m-r-none m-t m-b text-center">
+                              <div class="col-xs-4">
+                                <div class="padder-v">
+                                  <a href="#">
+                                      <span class="m-b-xs block">
+                                        <i class="i i-mail i-2x text-primary-lt"></i>
+                                      </span>
+                                    <small class="text-muted">分组一</small>
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="col-xs-4">
+                                <div class="padder-v">
+                                  <a href="#">
+                                      <span class="m-b-xs block">
+                                        <i class="i i-map i-2x text-success-lt"></i>
+                                      </span>
+                                    <small class="text-muted">分组二</small>
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="col-xs-4">
+                                <div class="padder-v">
+                                  <a href="#">
+                                      <span class="m-b-xs block">
+                                        <i class="i i-paperplane i-2x text-info-lt"></i>
+                                      </span>
+                                    <small class="text-muted">分组三</small>
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="col-xs-4">
+                                <div class="padder-v">
+                                  <a href="#">
+                                      <span class="m-b-xs block">
+                                        <i class="i i-images i-2x text-muted"></i>
+                                      </span>
+                                    <small class="text-muted">分组四</small>
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="col-xs-4">
+                                <div class="padder-v">
+                                  <a href="#">
+                                      <span class="m-b-xs block">
+                                        <i class="i i-calendar i-2x text-danger-lt"></i>
+                                      </span>
+                                    <small class="text-muted">分组五</small>
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="col-xs-4">
+                                <div class="padder-v">
+                                  <a href="#">
+                                      <span class="m-b-xs block">
+                                        <i class="i i-clock i-2x text-warning-lter"></i>
+                                      </span>
+                                    <small class="text-muted">分组六</small>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><label class="checkbox m-l m-t-none m-b-none i-checks"><input type="checkbox" name="post[]"><i></i></label></td>
+                        <td>
+                              <span class="thumb-sm avatar">
+                                <img src="images/a0.png" alt="...">
+                              </span>
+                        </td>
+                        <td style="line-height: 34px"><a href="#">马晨</a></td>
+                        <td style="line-height: 34px">北京大学</td>
+                        <td style="line-height: 34px">计算机科学与技术</td>
+                        <td style="line-height: 34px">
+                          <a href="#"><i class="iconfont" data-toggle="tooltip" data-original-title="下载">&#xe603;</i></a>
+                        </td>
+
+                        <td style="line-height: 34px">
+                          <a href="#"><i class="iconfont" data-toggle="tooltip" data-original-title="删除">&#xe602;</i></a>
+                        </td>
+
+                        <td style="line-height: 34px">
+                          <a href="#" data-toggle="dropdown"  class="iconfont dropdown-toggle">
+                            <i class="iconfont" data-toggle="tooltip" data-original-title="移动">&#xe60a;</i></a>
+                          <section class="dropdown-menu aside-lg bg-white animated fadeInLeft" style="margin-left: -253px;">
+                            <div class="row m-l-none m-r-none m-t m-b text-center">
+                              <div class="col-xs-4">
+                                <div class="padder-v">
+                                  <a href="#">
+                                      <span class="m-b-xs block">
+                                        <i class="i i-mail i-2x text-primary-lt"></i>
+                                      </span>
+                                    <small class="text-muted">分组一</small>
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="col-xs-4">
+                                <div class="padder-v">
+                                  <a href="#">
+                                      <span class="m-b-xs block">
+                                        <i class="i i-map i-2x text-success-lt"></i>
+                                      </span>
+                                    <small class="text-muted">分组二</small>
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="col-xs-4">
+                                <div class="padder-v">
+                                  <a href="#">
+                                      <span class="m-b-xs block">
+                                        <i class="i i-paperplane i-2x text-info-lt"></i>
+                                      </span>
+                                    <small class="text-muted">分组三</small>
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="col-xs-4">
+                                <div class="padder-v">
+                                  <a href="#">
+                                      <span class="m-b-xs block">
+                                        <i class="i i-images i-2x text-muted"></i>
+                                      </span>
+                                    <small class="text-muted">分组四</small>
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="col-xs-4">
+                                <div class="padder-v">
+                                  <a href="#">
+                                      <span class="m-b-xs block">
+                                        <i class="i i-calendar i-2x text-danger-lt"></i>
+                                      </span>
+                                    <small class="text-muted">分组五</small>
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="col-xs-4">
+                                <div class="padder-v">
+                                  <a href="#">
+                                      <span class="m-b-xs block">
+                                        <i class="i i-clock i-2x text-warning-lter"></i>
+                                      </span>
+                                    <small class="text-muted">分组六</small>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><label class="checkbox m-l m-t-none m-b-none i-checks"><input type="checkbox" name="post[]"><i></i></label></td>
+                        <td>
+                              <span class="thumb-sm avatar">
+                                <img src="images/a0.png" alt="...">
+                              </span>
+                        </td>
+                        <td style="line-height: 34px"><a href="#">马晨</a></td>
+                        <td style="line-height: 34px">北京大学</td>
+                        <td style="line-height: 34px">计算机科学与技术</td>
+                        <td style="line-height: 34px">
+                          <a href="#"><i class="iconfont" data-toggle="tooltip" data-original-title="下载">&#xe603;</i></a>
+                        </td>
+
+                        <td style="line-height: 34px">
+                          <a href="#"><i class="iconfont" data-toggle="tooltip" data-original-title="删除">&#xe602;</i></a>
+                        </td>
+
+                        <td style="line-height: 34px">
+                          <a href="#" data-toggle="dropdown"  class="iconfont dropdown-toggle">
+                            <i class="iconfont" data-toggle="tooltip" data-original-title="移动">&#xe60a;</i></a>
+                          <section class="dropdown-menu aside-lg bg-white animated fadeInLeft" style="margin-left: -253px;">
+                            <div class="row m-l-none m-r-none m-t m-b text-center">
+                              <div class="col-xs-4">
+                                <div class="padder-v">
+                                  <a href="#">
+                                      <span class="m-b-xs block">
+                                        <i class="i i-mail i-2x text-primary-lt"></i>
+                                      </span>
+                                    <small class="text-muted">分组一</small>
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="col-xs-4">
+                                <div class="padder-v">
+                                  <a href="#">
+                                      <span class="m-b-xs block">
+                                        <i class="i i-map i-2x text-success-lt"></i>
+                                      </span>
+                                    <small class="text-muted">分组二</small>
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="col-xs-4">
+                                <div class="padder-v">
+                                  <a href="#">
+                                      <span class="m-b-xs block">
+                                        <i class="i i-paperplane i-2x text-info-lt"></i>
+                                      </span>
+                                    <small class="text-muted">分组三</small>
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="col-xs-4">
+                                <div class="padder-v">
+                                  <a href="#">
+                                      <span class="m-b-xs block">
+                                        <i class="i i-images i-2x text-muted"></i>
+                                      </span>
+                                    <small class="text-muted">分组四</small>
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="col-xs-4">
+                                <div class="padder-v">
+                                  <a href="#">
+                                      <span class="m-b-xs block">
+                                        <i class="i i-calendar i-2x text-danger-lt"></i>
+                                      </span>
+                                    <small class="text-muted">分组五</small>
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="col-xs-4">
+                                <div class="padder-v">
+                                  <a href="#">
+                                      <span class="m-b-xs block">
+                                        <i class="i i-clock i-2x text-warning-lter"></i>
+                                      </span>
+                                    <small class="text-muted">分组六</small>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><label class="checkbox m-l m-t-none m-b-none i-checks"><input type="checkbox" name="post[]"><i></i></label></td>
+                        <td>
+                              <span class="thumb-sm avatar">
+                                <img src="images/a0.png" alt="...">
+                              </span>
+                        </td>
+                        <td style="line-height: 34px"><a href="#">马晨</a></td>
+                        <td style="line-height: 34px">北京大学</td>
+                        <td style="line-height: 34px">计算机科学与技术</td>
+                        <td style="line-height: 34px">
+                          <a href="#"><i class="iconfont" data-toggle="tooltip" data-original-title="下载">&#xe603;</i></a>
+                        </td>
+
+                        <td style="line-height: 34px">
+                          <a href="#"><i class="iconfont" data-toggle="tooltip" data-original-title="删除">&#xe602;</i></a>
+                        </td>
+
+                        <td style="line-height: 34px">
+                          <a href="#" data-toggle="dropdown"  class="iconfont dropdown-toggle">
+                            <i class="iconfont" data-toggle="tooltip" data-original-title="移动">&#xe60a;</i></a>
+                          <section class="dropdown-menu aside-lg bg-white animated fadeInLeft" style="margin-left: -253px;">
+                            <div class="row m-l-none m-r-none m-t m-b text-center">
+                              <div class="col-xs-4">
+                                <div class="padder-v">
+                                  <a href="#">
+                                      <span class="m-b-xs block">
+                                        <i class="i i-mail i-2x text-primary-lt"></i>
+                                      </span>
+                                    <small class="text-muted">分组一</small>
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="col-xs-4">
+                                <div class="padder-v">
+                                  <a href="#">
+                                      <span class="m-b-xs block">
+                                        <i class="i i-map i-2x text-success-lt"></i>
+                                      </span>
+                                    <small class="text-muted">分组二</small>
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="col-xs-4">
+                                <div class="padder-v">
+                                  <a href="#">
+                                      <span class="m-b-xs block">
+                                        <i class="i i-paperplane i-2x text-info-lt"></i>
+                                      </span>
+                                    <small class="text-muted">分组三</small>
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="col-xs-4">
+                                <div class="padder-v">
+                                  <a href="#">
+                                      <span class="m-b-xs block">
+                                        <i class="i i-images i-2x text-muted"></i>
+                                      </span>
+                                    <small class="text-muted">分组四</small>
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="col-xs-4">
+                                <div class="padder-v">
+                                  <a href="#">
+                                      <span class="m-b-xs block">
+                                        <i class="i i-calendar i-2x text-danger-lt"></i>
+                                      </span>
+                                    <small class="text-muted">分组五</small>
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="col-xs-4">
+                                <div class="padder-v">
+                                  <a href="#">
+                                      <span class="m-b-xs block">
+                                        <i class="i i-clock i-2x text-warning-lter"></i>
+                                      </span>
+                                    <small class="text-muted">分组六</small>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><label class="checkbox m-l m-t-none m-b-none i-checks"><input type="checkbox" name="post[]"><i></i></label></td>
+                        <td>
+                              <span class="thumb-sm avatar">
+                                <img src="images/a0.png" alt="...">
+                              </span>
+                        </td>
+                        <td style="line-height: 34px"><a href="#">马晨</a></td>
+                        <td style="line-height: 34px">北京大学</td>
+                        <td style="line-height: 34px">计算机科学与技术</td>
+                        <td style="line-height: 34px">
+                          <a href="#"><i class="iconfont" data-toggle="tooltip" data-original-title="下载">&#xe603;</i></a>
+                        </td>
+
+                        <td style="line-height: 34px">
+                          <a href="#"><i class="iconfont" data-toggle="tooltip" data-original-title="删除">&#xe602;</i></a>
+                        </td>
+
+                        <td style="line-height: 34px">
+                          <a href="#" data-toggle="dropdown"  class="iconfont dropdown-toggle">
+                            <i class="iconfont" data-toggle="tooltip" data-original-title="移动">&#xe60a;</i></a>
+                          <section class="dropdown-menu aside-lg bg-white animated fadeInLeft" style="margin-left: -253px;">
+                            <div class="row m-l-none m-r-none m-t m-b text-center">
+                              <div class="col-xs-4">
+                                <div class="padder-v">
+                                  <a href="#">
+                                      <span class="m-b-xs block">
+                                        <i class="i i-mail i-2x text-primary-lt"></i>
+                                      </span>
+                                    <small class="text-muted">分组一</small>
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="col-xs-4">
+                                <div class="padder-v">
+                                  <a href="#">
+                                      <span class="m-b-xs block">
+                                        <i class="i i-map i-2x text-success-lt"></i>
+                                      </span>
+                                    <small class="text-muted">分组二</small>
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="col-xs-4">
+                                <div class="padder-v">
+                                  <a href="#">
+                                      <span class="m-b-xs block">
+                                        <i class="i i-paperplane i-2x text-info-lt"></i>
+                                      </span>
+                                    <small class="text-muted">分组三</small>
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="col-xs-4">
+                                <div class="padder-v">
+                                  <a href="#">
+                                      <span class="m-b-xs block">
+                                        <i class="i i-images i-2x text-muted"></i>
+                                      </span>
+                                    <small class="text-muted">分组四</small>
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="col-xs-4">
+                                <div class="padder-v">
+                                  <a href="#">
+                                      <span class="m-b-xs block">
+                                        <i class="i i-calendar i-2x text-danger-lt"></i>
+                                      </span>
+                                    <small class="text-muted">分组五</small>
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="col-xs-4">
+                                <div class="padder-v">
+                                  <a href="#">
+                                      <span class="m-b-xs block">
+                                        <i class="i i-clock i-2x text-warning-lter"></i>
+                                      </span>
+                                    <small class="text-muted">分组六</small>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
+                        </td>
+                      </tr>
+
+                      </tbody>
+                    </table>
+                  </div>
+                  <footer class="panel-footer">
+                    <div class="row">
+                      <div class="m-l" style="float: left">
+                        显示
+                        <div class="btn-group">
+                          <button class="btn btn-default">5</button>
+                          <button class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                          <ul class="dropdown-menu">
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">10</a></li>
+                            <li><a href="#">20</a></li>
+                          </ul>
+                        </div>
+                        页
+                      </div>
+                      <div class="m-r text-right text-center-xs">
+                        <ul class="pagination pagination-sm m-t-none m-b-none">
+                          <li><a href="#"><i class="fa fa-chevron-left"></i></a></li>
+                          <li><a href="#">1</a></li>
+                          <li><a href="#">2</a></li>
+                          <li><a href="#">3</a></li>
+                          <li><a href="#">4</a></li>
+                          <li><a href="#">5</a></li>
+                          <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </footer>
+                </section>
+              </section>
+            </section>
+            <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
+            <!--END CONTENT -->
+          </section>
+        </section>
+      </section>
+</section>
+
+
+<!-- BEGIN MODAL -->
+
+  <!-- END modal -->
+
+
+
+
+
+
+  <script type='text/javascript' src=js/jquery.min.js></script>
+  <!-- Bootstrap -->
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <!-- App -->
+  <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript"  src="js/slimscroll/jquery.slimscroll.min.js"></script>
+  <script type="text/javascript" src="js/app.plugin.js"></script>
+  <!-- BEGIN PAGE LEVEL SCRIPTS -->
+
+  <!-- END PAGE LEVEL SCRIPTS -->
+</body>
+</html>

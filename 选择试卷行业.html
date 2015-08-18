@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en" class="app">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Scale | Web Application</title>
+    <meta name="description"
+          content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="css/animate.css" type="text/css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css"/>
+    <link rel="stylesheet" href="css/icon.css" type="text/css"/>
+    <link rel="stylesheet" href="css/font.css" type="text/css"/>
+    <link rel="stylesheet" href="css/app.css" type="text/css"/>
+    <!-- BEGIN THEME STYLES -->
+    <link rel="stylesheet" href="assets/css/noodles.css" type="text/css"/>
+    <!-- END THEME STYLES -->
+
+    <!--[if lt IE 9]>
+    <script src="js/ie/html5shiv.js"></script>
+    <script src="js/ie/respond.min.js"></script>
+    <script src="js/ie/excanvas.js"></script>
+    <![endif]-->
+
+    <!-- BEGIN CUSTOM STYLES -->
+    <style type="text/css">
+        .iconfont {
+            font-family: "iconfont" !important ;
+            font-size: 16px;
+            font-style: normal;
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-stroke-width: 0.2px;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+
+
+
+        /*#main > a >.spark :hover{*/
+            /*box-shadow: 3px 3px 7px darkgrey;*/
+        /*}*/
+
+        /*.nosd{*/
+            /*box-shadow: 0 0 0 0 #ffffff;*/
+        /*}*/
+
+
+        /*.scrollable .wrapper > a:hover > a,*/
+        /*.scrollable .wrapper > a:focus > a,*/
+        /*.scrollable .wrapper > a:active > a,*/
+        /*.scrollable .wrapper > a:hover {*/
+            /*box-shadow: 2px 2px 10px black;!important;*/
+        /*}*/
+
+
+        .spark:hover{
+            border: 4px solid #ffffff;
+            background-color: #e65c16;
+        }
+
+        .job-banner {
+            height: 195px;
+            font-size: 18px;
+            color: #ffffff;
+            padding-top: 50px;
+        }
+
+        .purple {
+            background-color: #2F3042;
+        }
+
+        .green {
+            background-color: #83CA2C;
+        }
+
+        .blue {
+            background-color: #3688F6;
+        }
+
+        .orange-lt {
+            background-color: #E69C17;
+        }
+
+        .orange-dk {
+            background-color: #E67316;
+        }
+
+        .pink-dk {
+            background-color: #E51757;
+        }
+
+        .pink-lt {
+            background-color: #FF3A5B;
+        }
+
+
+    </style>
+    <!-- END CUSTOM STYLES -->
+
+</head>
+<body class="container">
+<section class="vbox">
+    <header class="bg-danger header header-md navbar navbar-fixed-top-xs box-shadow">
+        <div class="navbar-header aside-md dk">
+            <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen,open" data-target="#nav,html">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="#" class="navbar-brand">
+                <span class="hidden-nav-xs">面条校园</span>
+            </a>
+            <a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".user">
+                <i class="fa fa-cog"></i>
+            </a>
+        </div>
+
+        <ul class="nav navbar-nav active navbar-left m-n hidden-xs ">
+            <li>
+                <a href="#">
+                    简历
+                </a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-left m-n hidden-xs">
+            <li class="">
+                <a href="笔试列表.html">
+                    在线考试
+                </a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-left m-n hidden-xs">
+            <li class="">
+                <a href="#">
+                    更多
+                </a>
+            </li>
+        </ul>
+
+
+        <ul class="nav navbar-nav navbar-right m-n hidden-xs nav-user user">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <span class="thumb-sm avatar pull-left">
+              <img src="images/a0.png" alt="...">
+            </span>
+                    John.Smith <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu animated fadeInRight">
+                    <li>
+                        <span class="arrow top"></span>
+                        <a href="#">简历导出</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="#" data-toggle="ajaxModal">登出</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+
+    <section>
+        <section class="hbox stretch">
+            <section id="content">
+                <!-- BEGIN CONTENT -->
+                <section class="vbox">
+                    <section class=" wrapper scrollable">
+                        <section class="panel panel-default" style="line-height: 55px">
+                            <header class="panel-heading">
+                                <div class="row">
+                                    <span class="col-lg-4 m-t-sm m-b-sm h5"><a href="#" class="">返回</a></span>
+                                    <span class="col-lg-4 text-center h4 m-t-sm m-b-sm">请选择行业</span>
+                                </div>
+                            </header>
+                            <section class="scrollable wrapper">
+                                <div id="main" class="row text-center">
+                                    <a href="选择具体试卷.html">
+                                        <div class="ho col-lg-3 m-t-md">
+                                            <div class="spark job-banner purple">
+                                                <i class="iconfont nosd" style="font-size: 45px;">&#xe60f;</i>
+                                                <br/>
+                                                <span class="m-b-lg text-lg nosd">计算机/互联网/通信</span>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                    <a href="#">
+                                        <div class="col-lg-3 m-t-md">
+                                            <div class="spark job-banner purple">
+                                                <i class="iconfont" style="font-size: 45px;">&#xe60e;</i>
+                                                <br/>
+                                                <span class="m-b-lg text-lg">生产/运营/采购</span>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                    <a href="#">
+                                        <div class="col-lg-3 m-t-md">
+                                            <div class="spark job-banner purple">
+                                                <i class="iconfont" style="font-size: 45px;">&#xe613;</i>
+                                                <br/>
+                                                <span class="m-b-lg text-lg">银行/保险/会计/金融</span>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                    <a href="#">
+                                        <div class="col-lg-3 m-t-md">
+                                            <div class="spark job-banner purple">
+                                                <i class="iconfont" style="font-size: 45px;">&#xe617;</i>
+                                                <br/>
+                                                <span class="m-b-lg text-lg">销售/客服/技术支持</span>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                    <a href="#">
+                                        <div class="col-lg-3 m-t-md">
+                                            <div class="spark job-banner purple">
+                                                <i class="iconfont" style="font-size: 45px;">&#xe611;</i>
+                                                <br/>
+                                                <span class="m-b-lg text-lg">生物/制药/医疗/护理</span>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                    <a href="#">
+                                        <div class="col-lg-3 m-t-md">
+                                            <div class="spark job-banner purple">
+                                                <i class="iconfont" style="font-size: 45px;">&#xe611;</i>
+                                                <br/>
+                                                <span class="m-b-lg text-lg">生物/制药/医疗/护理</span>
+                                            </div>
+                                        </div>
+                                    </a>
+
+
+                                    <a href="#">
+                                        <div class="col-lg-3 m-t-md">
+                                            <div class="spark job-banner purple">
+                                                <i class="iconfont" style="font-size: 45px;">&#xe60e;</i>
+                                                <br/>
+                                                <span class="m-b-lg text-lg">生产/运营/采购</span>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                    <a href="#">
+                                        <div class="col-lg-3 m-t-md">
+                                            <div class="spark job-banner purple">
+                                                <i class="iconfont" style="font-size: 45px;">&#xe613;</i>
+                                                <br/>
+                                                <span class="m-b-lg text-lg">银行/保险/会计/金融</span>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                    <a href="#">
+                                        <div class="col-lg-3 m-t-md">
+                                            <div class="spark job-banner purple">
+                                                <i class="iconfont" style="font-size: 45px;">&#xe60e;</i>
+                                                <br/>
+                                                <span class="m-b-lg text-lg">生产/运营/采购</span>
+                                            </div>
+                                        </div>
+                                    </a>
+
+
+
+                                    <div id="textbox" style="height: 500px;width: 600px;">
+
+                                    </div>
+
+
+                                </div>
+                            </section>
+                        </section>
+                    </section>
+                </section>
+                <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
+                <!--END CONTENT -->
+            </section>
+        </section>
+    </section>
+
+
+</section>
+<script type='text/javascript' src=js/jquery.min.js></script>
+<!-- Bootstrap -->
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<!-- App -->
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/slimscroll/jquery.slimscroll.min.js"></script>
+<script type="text/javascript" src="js/app.plugin.js"></script>
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+
+<!-- END PAGE LEVEL SCRIPTS -->
+</body>
+</html>

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en" class="app">
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Scale | Web Application</title>
+  <meta name="description"
+        content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+  <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
+  <link rel="stylesheet" href="css/animate.css" type="text/css"/>
+  <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css"/>
+  <link rel="stylesheet" href="css/icon.css" type="text/css"/>
+  <link rel="stylesheet" href="css/font.css" type="text/css"/>
+  <link rel="stylesheet" href="css/app.css" type="text/css"/>
+  <!-- BEGIN THEME STYLES -->
+  <link rel="stylesheet" href="assets/css/noodles.css" type="text/css"/>
+  <!-- END THEME STYLES -->
+
+  <!--[if lt IE 9]>
+  <script src="js/ie/html5shiv.js"></script>
+  <script src="js/ie/respond.min.js"></script>
+  <script src="js/ie/excanvas.js"></script>
+  <![endif]-->
+
+  <!-- BEGIN CUSTOM STYLES -->
+  <style type="text/css">
+
+      .iconfont {
+          font-family: "iconfont" !important;
+          font-size: 16px;
+          font-style: normal;
+          -webkit-font-smoothing: antialiased;
+          -webkit-text-stroke-width: 0.2px;
+          -moz-osx-font-smoothing: grayscale;
+      }
+
+    .cut-line {
+      width: 1px;
+      height: 45px;
+      background-color: #DADADA;
+      float: right;
+      margin-right: -10px;
+      margin-top: -15px;
+    }
+
+    .job-banner {
+      line-height: 175px;
+      font-size: 28px;
+      color: #ffffff;
+    }
+
+    .purple {
+      background-color: #2F3042;
+    }
+
+    .green {
+      background-color: #83CA2C;
+    }
+
+    .blue {
+      background-color: #3688F6;
+    }
+
+    .orange-lt {
+      background-color: #E69C17;
+    }
+
+    .orange-dk {
+      background-color: #E67316;
+    }
+
+    .pink-dk {
+      background-color: #E51757;
+    }
+
+    .pink-lt {
+      background-color: #FF3A5B;
+    }
+
+
+      .blank{
+          background-color: #ffffff;
+          padding-top: 15px;
+          padding-bottom: 15px;
+          padding-left: -2px;
+          height: 270px;
+          margin-bottom:15px ;
+
+      }
+
+      .blink:hover{
+          border: 4px solid #ffffff;
+      }
+
+      .job-banner:hover{
+          background-color: #e65c16;
+      }
+
+
+  </style>
+  <!-- END CUSTOM STYLES -->
+
+</head>
+<body class="container">
+<section class="vbox">
+    <header class="bg-danger header header-md navbar navbar-fixed-top-xs box-shadow">
+        <div class="navbar-header aside-md dk">
+            <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen,open" data-target="#nav,html">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="#" class="navbar-brand">
+                <span class="hidden-nav-xs">面条校园</span>
+            </a>
+            <a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".user">
+                <i class="fa fa-cog"></i>
+            </a>
+        </div>
+
+        <ul class="nav navbar-nav active navbar-left m-n hidden-xs ">
+            <li>
+                <a href="#">
+                    简历
+                </a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-left m-n hidden-xs">
+            <li class="">
+                <a href="笔试列表.html">
+                    在线考试
+                </a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-left m-n hidden-xs">
+            <li class="">
+                <a href="#">
+                    更多
+                </a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right m-n hidden-xs nav-user user">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <span class="thumb-sm avatar pull-left">
+              <img src="images/a0.png" alt="...">
+            </span>
+                    John.Smith <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu animated fadeInRight">
+                    <li>
+                        <span class="arrow top"></span>
+                        <a href="#">简历导出</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="#" data-toggle="ajaxModal">登出</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+
+    <section>
+        <section class="hbox stretch ">
+        <section id="content ">
+            <!-- BEGIN CONTENT -->
+            <section class="vbox ">
+                <section class=" wrapper scrollable">
+                    <section class="panel panel-default">
+                        <header class="panel-heading">
+                            <div class="row">
+                                <!--<span class="col-lg-4 h5 m-t-sm m-b-sm"><a href="#">如何使用？</a></span>-->
+                                <span class="col-lg-4 h5 m-t-sm m-b-sm"><a href="#" data-toggle="modal" data-target="#myModal2">如何使用？</a></span>
+
+
+
+                                <span class="col-lg-4 text-center h4 m-t-sm m-b-sm">在线职业能力测试</span>
+                                <span class="col-lg-4 text-right h5 m-t-sm">您的考试码为：
+                                    <a href="#">
+                                        <span style="color: #0077b3;" data-toggle="modal" data-target="#myModal">397b3</span>
+                                    </a>
+                                    <span><i class="fa fa-question h6"></i></span>
+                                </span>
+
+                            </div>
+                        </header>
+
+                        <section class="scrollable wrapper"  style="background-color: #F3F4F8">
+                            <div class="row text-center">
+                                <a href="#" class="">
+                                    <div class="col-md-4 ">
+                                        <div class="col-md-12 blink blank" >
+                                            <div class="job-banner purple" style="position: relative">
+                                                <!--<i class="iconfont" style="position:absolute; margin:-70px 0 0 240px;opacity:1 ">&#xe61d;</i>-->
+                                                <!--<a href="#">-->
+                                                    <!--<i class="iconfont" style="position:absolute; margin:-70px 0 0 240px;opacity:1 ">&#xe61d;</i>-->
+                                                <!--</a>-->
+                                                <a href="del.jsp?id=<%=id%>" onclick="javascript:return p_del()">
+                                                    <i class="iconfont" style="position:absolute; margin:-70px 0 0 240px;opacity:1 ">&#xe61d;</i>
+                                                </a>
+
+
+                                                JAVA开发工程师
+                                            </div>
+                                            <div class=" m-t-sm">
+                                                <div class="col-lg-4">
+                                                    <div class="input-sm">30分钟</div>
+                                                    <span class="text-muted text-sm">考试时间</span>
+                                                    <div class="cut-line" style="margin-top: -22px"></div>
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <div class="input-sm">1136人</div>
+                                                    <span class="text-muted text-sm">参加人数</span>
+                                                    <div class="cut-line" style="margin-top: -22px"></div>
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <div class="input-sm">345份</div>
+                                                    <span class="text-muted text-sm input-sm">待查看</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="">
+                                    <div class="col-md-4 ">
+                                        <div class="col-md-12 blink blank" >
+                                            <div class="job-banner purple">JAVA开发工程师</div>
+                                            <div class=" m-t-sm">
+                                                <div class="col-lg-4">
+                                                    <div class="input-sm">30分钟</div>
+                                                    <span class="text-muted text-sm">考试时间</span>
+                                                    <div class="cut-line" style="margin-top: -22px"></div>
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <div class="input-sm">1136人</div>
+                                                    <span class="text-muted text-sm">参加人数</span>
+                                                    <div class="cut-line" style="margin-top: -22px"></div>
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <div class="input-sm">345份</div>
+                                                    <span class="text-muted text-sm input-sm">待查看</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="">
+                                    <div class="col-md-4 ">
+                                        <div class="col-md-12 blink blank" >
+                                            <div class="job-banner purple">JAVA开发工程师</div>
+                                            <div class=" m-t-sm">
+                                                <div class="col-lg-4">
+                                                    <div class="input-sm">30分钟</div>
+                                                    <span class="text-muted text-sm">考试时间</span>
+                                                    <div class="cut-line" style="margin-top: -22px"></div>
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <div class="input-sm">1136人</div>
+                                                    <span class="text-muted text-sm">参加人数</span>
+                                                    <div class="cut-line" style="margin-top: -22px"></div>
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <div class="input-sm">345份</div>
+                                                    <span class="text-muted text-sm input-sm">待查看</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="">
+                                    <div class="col-md-4 ">
+                                        <div class="col-md-12 blink blank" >
+                                            <div class="job-banner purple">JAVA开发工程师</div>
+                                            <div class=" m-t-sm">
+                                                <div class="col-lg-4">
+                                                    <div class="input-sm">30分钟</div>
+                                                    <span class="text-muted text-sm">考试时间</span>
+                                                    <div class="cut-line" style="margin-top: -22px"></div>
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <div class="input-sm">1136人</div>
+                                                    <span class="text-muted text-sm">参加人数</span>
+                                                    <div class="cut-line" style="margin-top: -22px"></div>
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <div class="input-sm">345份</div>
+                                                    <span class="text-muted text-sm input-sm">待查看</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="">
+                                    <div class="col-md-4 ">
+                                        <div class="col-md-12 blink blank" >
+                                            <div class="job-banner purple">JAVA开发工程师</div>
+                                            <div class=" m-t-sm">
+                                                <div class="col-lg-4">
+                                                    <div class="input-sm">30分钟</div>
+                                                    <span class="text-muted text-sm">考试时间</span>
+                                                    <div class="cut-line" style="margin-top: -22px"></div>
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <div class="input-sm">1136人</div>
+                                                    <span class="text-muted text-sm">参加人数</span>
+                                                    <div class="cut-line" style="margin-top: -22px"></div>
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <div class="input-sm">345份</div>
+                                                    <span class="text-muted text-sm input-sm">待查看</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="">
+                                    <div class="col-md-4 ">
+                                        <div class="col-md-12 blink blank" >
+                                            <div class="job-banner purple">JAVA开发工程师</div>
+                                            <div class=" m-t-sm">
+                                                <div class="col-lg-4">
+                                                    <div class="input-sm">30分钟</div>
+                                                    <span class="text-muted text-sm">考试时间</span>
+                                                    <div class="cut-line" style="margin-top: -22px"></div>
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <div class="input-sm">1136人</div>
+                                                    <span class="text-muted text-sm">参加人数</span>
+                                                    <div class="cut-line" style="margin-top: -22px"></div>
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <div class="input-sm">345份</div>
+                                                    <span class="text-muted text-sm input-sm">待查看</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+
+
+
+
+
+                            </div>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
+            <!--END CONTENT -->
+        </section>
+      </section>
+    </section>
+
+
+
+
+</section>
+
+<!-- BEGIN MODAL -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" >修改考试码</h4>
+            </div>
+            <div class="modal-body">18C68</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">更改</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">使用教程</h4>
+            </div>
+            <div class="modal-body">step1<br/>step2<br/>step3<br/>step4<br/></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">确定</button>
+                <button type="button" class="btn btn-primary">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- END MODAL -->
+<script type='text/javascript' src=js/jquery.min.js></script>
+
+
+<!-- Bootstrap -->
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<!-- App -->
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript"  src="js/slimscroll/jquery.slimscroll.min.js"></script>
+<script type="text/javascript" src="js/app.plugin.js"></script>
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+<SCRIPT LANGUAGE=javascript>
+    function p_del() {
+        var msg = "您真的确定要删除吗？\n\n请确认！";
+        if (confirm(msg)==true){
+            return true;
+        }else{
+            return false;
+        }
+    }
+</SCRIPT>
+<!-- END PAGE LEVEL SCRIPTS -->
+</body>
+</html>

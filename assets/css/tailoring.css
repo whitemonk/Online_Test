@@ -1,0 +1,81 @@
+.ui-widget-content {
+	/* BORDER-RIGHT: #8e846b 1px solid; 
+	BORDER-TOP: #8e846b 1px solid;  */
+	/* BACKGROUND: url(images/ui-bg_highlight-soft_100_feeebd_1x100.png) #feeebd repeat-x 50% top; */ 
+	/* BORDER-LEFT: #8e846b 1px solid;  */
+	width:inherit;
+	/* height:2px;  */
+	background:#eee;
+	COLOR: #383838; 
+	border:none;
+	/* BORDER-BOTTOM: #8e846b 1px solid */
+}
+.ui-state-default {
+	/* BORDER-RIGHT: #d19405 1px solid; 
+	BORDER-TOP: #d19405 1px solid; */ 
+	FONT-WEIGHT: bold; 
+	BACKGROUND: url(images/ui-bg_gloss-wave_60_fece2f_500x100.png) #fece2f repeat-x 50% 50%; 
+	/* BORDER-LEFT: #d19405 1px solid;  */
+	COLOR: #4c3000; 
+	/* BORDER-BOTTOM: #d19405 1px solid;  */
+	outline: none
+}
+.ui-widget-content .ui-state-default {
+	/* BORDER-RIGHT: #d19405 1px solid; 
+	BORDER-TOP: #d19405 1px solid;  */
+	margin-top:-2px;
+	FONT-WEIGHT: bold; 
+	/* BACKGROUND: url(images/ui-bg_gloss-wave_60_fece2f_500x100.png) #fece2f repeat-x 50% 50%; */
+	BACKGROUND: url(../../images/myresume/mr_headimage.png) #00c195  -50px -3px ; 
+	/* BORDER-LEFT: #d19405 1px solid;  */
+	COLOR: #4c3000; 
+	/* BORDER-BOTTOM: #d19405 1px solid; */ 
+	outline: none
+}
+.ui-state-hover {
+	/* BORDER-RIGHT: #a45b13 1px solid; 
+	BORDER-TOP: #a45b13 1px solid;  */
+	FONT-WEIGHT: bold; 
+	BACKGROUND: url(images/ui-bg_gloss-wave_70_ffdd57_500x100.png) #ffdd57 repeat-x 50% 50%; 
+	/* BORDER-LEFT: #a45b13 1px solid; */ 
+	COLOR: #381f00; 
+	/* BORDER-BOTTOM: #a45b13 1px solid;  */
+	outline: none
+}
+.ui-widget-content .ui-state-hover {
+	/* BORDER-RIGHT: #a45b13 1px solid; BORDER-TOP: #a45b13 1px solid; FONT-WEIGHT: bold; BACKGROUND: url(images/ui-bg_gloss-wave_70_ffdd57_500x100.png) #ffdd57 repeat-x 50% 50%; BORDER-LEFT: #a45b13 1px solid; COLOR: #381f00; BORDER-BOTTOM: #a45b13 1px solid; outline: none */
+}
+.ui-state-focus {
+	/* BORDER-RIGHT: #a45b13 1px solid; 
+	BORDER-TOP: #a45b13 1px solid; */ 
+	FONT-WEIGHT: bold; 
+	/* BACKGROUND: url(images/ui-bg_gloss-wave_70_ffdd57_500x100.png) #ffdd57 repeat-x 50% 50%;  */
+	/* BORDER-LEFT: #a45b13 1px solid;  */
+	COLOR: #381f00; 
+	/* BORDER-BOTTOM: #a45b13 1px solid; */ 
+	outline: none
+}
+.ui-widget-content .ui-state-focus {
+	/* BORDER-RIGHT: #a45b13 1px solid; 
+	BORDER-TOP: #a45b13 1px solid; */ 
+	margin-top:-2px;
+	FONT-WEIGHT: bold; 
+	/* BACKGROUND: url(images/ui-bg_gloss-wave_70_ffdd57_500x100.png) #ffdd57 repeat-x 50% 50%;  */
+	/* background:#00c195; */
+	/* BORDER-LEFT: #a45b13 1px solid;  */
+	COLOR: #381f00; 
+	/* BORDER-BOTTOM: #a45b13 1px solid; */ 
+	outline: none
+}
+.ui-state-hover A {
+	/* COLOR: #381f00; TEXT-DECORATION: none; outline: none */
+}
+.ui-state-hover A:hover {
+	/* COLOR: #381f00; TEXT-DECORATION: none; outline: none */
+}
+.ui-slider-horizontal .ui-slider-handle{
+	top:-.3em;
+    width: 1.2em;
+    background-position: -52px -1px;
+    cursor: pointer;
+}

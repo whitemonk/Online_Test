@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en" class="app">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Scale | Web Application</title>
+    <meta name="description"
+          content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="css/animate.css" type="text/css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css"/>
+    <link rel="stylesheet" href="css/icon.css" type="text/css"/>
+    <link rel="stylesheet" href="css/font.css" type="text/css"/>
+    <link rel="stylesheet" href="css/app.css" type="text/css"/>
+    <!-- BEGIN THEME STYLES -->
+    <link rel="stylesheet" href="assets/css/noodles.css" type="text/css"/>
+    <!-- markdown-->
+
+    <!-- END THEME STYLES -->
+
+    <!--[if lt IE 9]>
+    <script src="js/ie/html5shiv.js"></script>
+    <script src="js/ie/respond.min.js"></script>
+    <script src="js/ie/excanvas.js"></script>
+    <![endif]-->
+
+    <!-- BEGIN CUSTOM STYLES -->
+<style>
+    .iconfont{
+        font-family:"iconfont" !important;
+        font-size:35px;
+        font-style:normal;
+        /*color: #8c8c8c;*/
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-stroke-width: 0.1px;
+        -moz-osx-font-smoothing: grayscale;}
+    .title{
+        font-size: 18px;
+        border-left: 3px solid #e65c16!important;
+    }
+    .custom-title{
+        width: 12%!important;text-align: left!important;
+    }
+    .custom-input{
+        width: 88%!important;
+    }
+    @media screen and (max-width:1200px){
+        .custom-title{
+            width: 100%!important;text-align: left!important;
+        }
+        .custom-input{
+            width: 100%!important;
+        }
+    }
+    .btn-modal{
+        height:60px;
+        background: #303041;
+        color: #ffffff !important;
+    }
+    .glyphicon-remove
+    {display:none;}
+    .btn:hover .glyphicon-remove{
+        font-size: 10px;
+        width: 20px;
+        height: 20px;
+        display:block;
+        position: absolute;
+        left:188px;
+        top:5px;
+        color: #303041;
+    }
+    .width{
+        width: 100%!important;
+    }
+    #edui1{
+        width: 100%!important;
+    }
+    span.m-l-sm{
+        font-size: 26px;
+        height:40px;
+        /* Firefox */
+        display:-moz-box;
+        -moz-box-pack:center;
+        /* Safari, Chrome, and Opera */
+        display:-webkit-box;
+        -webkit-box-pack:center;
+    }
+    .modalName{
+        color: #ffffff!important;
+    }
+    .btn:hover .modalName{
+        color: #3e3e3e !important;
+    }
+    .adjunct-title{
+        margin-left: 15px;
+    }
+    .adjunct{
+        background: #e0ecf9;
+    }
+</style>
+    <!-- END CUSTOM STYLES -->
+
+</head>
+<body class="container">
+<section class="vbox">
+    <header class="bg-danger header header-md navbar navbar-fixed-top-xs box-shadow">
+        <div class="navbar-header aside-md dk">
+            <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen,open" data-target="#nav,html">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="#" class="navbar-brand">
+                <span class="hidden-nav-xs">面条校园</span>
+            </a>
+            <a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".user">
+                <i class="fa fa-cog"></i>
+            </a>
+        </div>
+
+        <ul class="nav navbar-nav active navbar-left m-n hidden-xs ">
+            <li>
+                <a href="hr后台.html">
+                    简历
+                </a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-left m-n hidden-xs">
+            <li class="">
+                <a href="笔试列表.html">
+                    在线考试
+                </a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-left m-n hidden-xs">
+            <li class="">
+                <a href="#">
+                    更多
+                </a>
+            </li>
+        </ul>
+
+
+        <ul class="nav navbar-nav navbar-right m-n hidden-xs nav-user user">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <span class="thumb-sm avatar pull-left">
+              <img src="images/a0.png" alt="...">
+            </span>
+                    John.Smith <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu animated fadeInRight">
+                    <li>
+                        <span class="arrow top"></span>
+                        <a href="#">简历导出</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="modal.lockme.html" data-toggle="ajaxModal">登出</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+
+    <section>
+        <section class="hbox stretch">
+            <!--aside-->
+            <aside class="bg-white aside-md hidden-print hidden-xs" id="nav" style="border-right: 1px solid #eaeef1">
+                <section class="vbox">
+                    <section class="w-f scrollable wrapper">
+                        <div>
+                        <a href="hr后台.html">
+                            <span class="pull-left" style="width: 40px"><i class="iconfont " style="font-size: 40px;line-height: 40px;">&#xe601;</i></span>
+                            <span class="pull-left m-l-sm" >返回</span>
+                        </a>
+                        </div>
+                        <div class="col-lg-12" style="margin-top:60px ;color: #333">
+                            <h4>邮件模板</h4>
+                        </div>
+                        <div class="input-group email-modal col-lg-12">
+                            <input type="text" class="input form-control" placeholder="">
+                            <span class="input-group-btn"><button class="btn btn-default" type="button"><i class="iconfont" style="font-size: 12px">&#xe600;</i></button></span>
+                        </div>
+                    </section>
+                </section>
+            </aside>
+            <!--aside-->
+            <section id="content">
+                <!-- BEGIN CONTENT -->
+                <section class="vbox">
+                    <section class="scrollable wrapper">
+                        <div class="panel panel-default">
+                            <div class="panel-heading title ">
+                                <span class="m-l-n-xs">邮件回复</span>
+                            </div>
+                            <div class="panel-body" >
+                                <form class="bs-example form-horizontal">
+                                    <div class="form-group" >
+                                        <label class="col-lg-2 control-label custom-title">收件人：</label>
+                                        <div class="col-lg-10 custom-input">
+                                            <input type="email" class="form-control btn-rounded" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="line line-dashed b-b line-lg pull-in"></div>
+                                    <div class="form-group">
+                                        <label class="col-lg-2 control-label custom-title">邮件标题：</label>
+                                        <div class="col-lg-10 custom-input" style="">
+                                            <input type="password" class="form-control btn-rounded" placeholder="">
+                                        </div>
+                                    </div>
+
+                                </form>
+                                <!--ueditor-->
+                                <div class="m-t-lg">
+                                    <div class="m-b-xs">
+                                        <a href="#"><i class="iconfont" style="font-size: 15px;color:#e65c16 ">&#xe628;</i>添加附件</a>
+                                    </div>
+                                    <div class="m-b-xs adjunct">
+                                        <span class="adjunct-title"><i class="iconfont" style="font-size: 15px;color:#e65c16 ">&#xe628;</i>2015最新前端开发学习资料集锦.doc (12.5K)添加到正文</span><a href="#" class="m-l-sm">删除</a>
+                                    </div>
+                                    <script id="editor" type="text/plain" style="height:200px;"></script>
+                                </div>
+                                <div class="btn-group m-t-lg m-b-md">
+                                    <button type="button" class="btn btn-default ">发送</button>
+                                    <button type="button" class="btn btn-default"><a href="#rename" data-toggle="modal">存为模板</a></button>
+                                    <button type="button" class="btn btn-default">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+
+
+
+                <!-- BEGIN CONTENT -->
+            </section>
+        </section>
+    </section>
+
+    <!--END CONTENT -->
+</section>
+
+<!-- BEGIN MODAL -->
+<div class="modal fade rename-modal" id="rename">
+    <div class="modal-dialog">
+        <div class="modal-content modal-content-custom">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">给文件夹取个名吧~</h4>
+            </div>
+            <div class="modal-body">
+                <input type="text" class="form-control modal-input" placeholder="未命名模板1">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn conform" style="background:#e65c16;color: #ffffff" data-dismiss="modal">确定</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+
+
+
+
+
+<!-- BEGIN MODAL -->
+
+<script type='text/javascript' src=js/jquery.min.js></script>
+<!-- Bootstrap -->
+<script type="text/javascript" src="js/bootstrap.js"></script>
+
+<!-- App -->
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/slimscroll/jquery.slimscroll.min.js"></script>
+<script type="text/javascript" src="js/app.plugin.js"></script>
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+<!--UEDITOR-->
+<script type="text/javascript" charset="utf-8" src="assets/plug-in/ueditor1_4_3-utf8-php/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="assets/plug-in/ueditor1_4_3-utf8-php/ueditor.all.min.js"> </script>
+<!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
+<!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
+<script type="text/javascript" charset="utf-8" src="assets/plug-in/ueditor1_4_3-utf8-php/lang/zh-cn/zh-cn.js"></script>
+
+<!-- END PAGE LEVEL SCRIPTS -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        /*存为模板*/
+        $(".conform").click(function() {
+            var i=1;
+            $(".email-modal").after("<button class='col-lg-12 btn btn-default m-t-md btn-modal' ><i  class='glyphicon glyphicon-remove'></i><a href='hr后台.html' id='button"+i+"' class='modalName'></a></button>");
+            $(".glyphicon-remove").click(function () {
+                alert("aaaaaa");
+            });
+            var value = $(".modal-input").val();
+            var placeholder = $(".modal-input").attr("placeholder");
+            var button = $("#button"+i+"");
+            if(value==""){
+                button.append(placeholder);
+            }else{
+                button.append(value);
+            }
+            i++;
+        });
+
+
+
+        //实例化编辑器
+        //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+        var ue = UE.getEditor('editor');
+        $("#editor").addClass('width');
+
+        function isFocus(e){
+            alert(UE.getEditor('editor').isFocus());
+            UE.dom.domUtils.preventDefault(e)
+        }
+        function setblur(e){
+            UE.getEditor('editor').blur();
+            UE.dom.domUtils.preventDefault(e)
+        }
+        function getAllHtml() {
+            alert(UE.getEditor('editor').getAllHtml())
+        }
+        function getContent() {
+            var arr = [];
+            arr.push("使用editor.getContent()方法可以获得编辑器的内容");
+            arr.push("内容为：");
+            arr.push(UE.getEditor('editor').getContent());
+            alert(arr.join("\n"));
+        }
+        function getPlainTxt() {
+            var arr = [];
+            arr.push("使用editor.getPlainTxt()方法可以获得编辑器的带格式的纯文本内容");
+            arr.push("内容为：");
+            arr.push(UE.getEditor('editor').getPlainTxt());
+            alert(arr.join('\n'))
+        }
+        function setContent(isAppendTo) {
+            var arr = [];
+            arr.push("使用editor.setContent('欢迎使用ueditor')方法可以设置编辑器的内容");
+            UE.getEditor('editor').setContent('欢迎使用ueditor', isAppendTo);
+            alert(arr.join("\n"));
+        }
+        function setDisabled() {
+            UE.getEditor('editor').setDisabled('fullscreen');
+            disableBtn("enable");
+        }
+
+        function setEnabled() {
+            UE.getEditor('editor').setEnabled();
+            enableBtn();
+        }
+
+        function getText() {
+            //当你点击按钮时编辑区域已经失去了焦点，如果直接用getText将不会得到内容，所以要在选回来，然后取得内容
+            var range = UE.getEditor('editor').selection.getRange();
+            range.select();
+            var txt = UE.getEditor('editor').selection.getText();
+            alert(txt)
+        }
+
+        function getContentTxt() {
+            var arr = [];
+            arr.push("使用editor.getContentTxt()方法可以获得编辑器的纯文本内容");
+            arr.push("编辑器的纯文本内容为：");
+            arr.push(UE.getEditor('editor').getContentTxt());
+            alert(arr.join("\n"));
+        }
+        function hasContent() {
+            var arr = [];
+            arr.push("使用editor.hasContents()方法判断编辑器里是否有内容");
+            arr.push("判断结果为：");
+            arr.push(UE.getEditor('editor').hasContents());
+            alert(arr.join("\n"));
+        }
+        function setFocus() {
+            UE.getEditor('editor').focus();
+        }
+        function deleteEditor() {
+            disableBtn();
+            UE.getEditor('editor').destroy();
+        }
+        function disableBtn(str) {
+            var div = document.getElementById('btns');
+            var btns = UE.dom.domUtils.getElementsByTagName(div, "button");
+            for (var i = 0, btn; btn = btns[i++];) {
+                if (btn.id == str) {
+                    UE.dom.domUtils.removeAttributes(btn, ["disabled"]);
+                } else {
+                    btn.setAttribute("disabled", "true");
+                }
+            }
+        }
+        function enableBtn() {
+            var div = document.getElementById('btns');
+            var btns = UE.dom.domUtils.getElementsByTagName(div, "button");
+            for (var i = 0, btn; btn = btns[i++];) {
+                UE.dom.domUtils.removeAttributes(btn, ["disabled"]);
+            }
+        }
+
+        function getLocalData () {
+            alert(UE.getEditor('editor').execCommand( "getlocaldata" ));
+        }
+
+        function clearLocalData () {
+            UE.getEditor('editor').execCommand( "clearlocaldata" );
+            alert("已清空草稿箱")
+        }
+    })
+</script>
+</body>
+</html>

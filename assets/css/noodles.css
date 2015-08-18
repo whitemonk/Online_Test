@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'iconfont';
+    src: url('../iconfont/one/iconfont.eot'); /* IE9*/
+    src: url('../iconfont/one/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../iconfont/one/iconfont.woff') format('woff'), /* chrome、firefox */ url('../iconfont/one/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('../iconfont/one/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.bg-danger .dk, .bg-danger {
+    background: #262736;
+}
+
+.bg-danger .nav .open > a,
+.bg-danger .nav > li:hover > a,
+.bg-danger .nav > li:focus > a,
+.bg-danger .nav > li:active > a,
+.bg-danger .nav > li.active > a,
+.bg-danger .nav > li > a:hover {
+    background-color: #303041;
+}
+
+.navbar-nav.active,
+.bg-danger .nav > li > a:focus {
+    background: #e65c16;
+}
+
+body {
+    font-family: "微软雅黑", serif;
+    background: #f2f5f7;
+    font-size: 14px;
+}
+
+header {
+    font-size: 16px;
+    font-family: "微软雅黑", serif;
+}
+
+header.panel-heading {
+    font-size: 18px;
+    font-family: "微软雅黑", serif;
+    color: #4e4e4e !important;
+}

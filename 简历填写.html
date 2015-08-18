@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en" class="app">
+<head>  
+  <meta charset="utf-8" />
+  <title>Scale | Web Application</title>
+  <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+  <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+  <link rel="stylesheet" href="css/animate.css" type="text/css" />
+  <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/icon.css" type="text/css" />
+  <link rel="stylesheet" href="css/font.css" type="text/css" />
+  <link rel="stylesheet" href="css/app.css" type="text/css" />
+    <link rel="stylesheet" href="js/datepicker/datepicker.css" type="text/css" />
+    <!--简历上传样式-->
+    <link rel="stylesheet" href="assets/css/activity.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/external.min.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/tailoring.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/myresume.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/popup.css" type="text/css" />
+   <!-- <link href="http://files.cnblogs.com/Charles2008/CSS.css" type="text/css" rel="stylesheet" />
+
+    <script type="text/javascript" src="http://files.cnblogs.com/Charles2008/Confirm.js"></script>-->
+    <link type="text/css" rel="stylesheet" href="assets/css/163css.css" />
+    <script type="text/javascript" src="assets/js/163css.js"></script>
+  <!--[if lt IE 9]>
+    <script src="js/ie/html5shiv.js"></script>
+    <script src="js/ie/respond.min.js"></script>
+    <script src="js/ie/excanvas.js"></script>
+  <![endif]-->
+    <style>
+        @font-face {font-family: 'iconfont';
+            src: url('assets/iconfont/one/iconfont.eot'); /* IE9*/
+            src: url('assets/iconfont/one/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('assets/iconfont/one/iconfont.woff') format('woff'), /* chrome、firefox */
+            url('assets/iconfont/one/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+            url('assets/iconfont/one/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+        }
+        .iconfont{
+            font-family:"iconfont" !important;
+            font-size:16px;font-style:normal;
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-stroke-width: 0.2px;
+            -moz-osx-font-smoothing: grayscale;}
+        body{
+            font-family:"微软雅黑";
+            font-size: 16px;
+        }
+
+        div .modal-content{
+            top:140px;
+           left:80px;
+        }
+
+        div label{
+            font-family: "宋体";
+            font-size: 16px;
+        }
+        div label span{
+            font-family: "微软雅黑";
+            font-size: 12px;
+        }
+        p{
+            font-size: 13px;
+        }
+        .panel{
+            border-radius: 5px;
+            border-color:#ddd;
+        }
+
+        .panel-info{
+            border-color: #ddd;
+            background-color: #eee;
+        }
+        .text-info {
+            color: #0993cf;
+        }
+        .nav li  {
+            height: 40px;
+        }
+        .nav li a{
+            height: 40px;
+            font-family:"微软雅黑";
+            font-size: 14px;
+            color: #ffffff;
+        }
+        .nav li  a:hover,.nav li  a:active,.nav li  a:focus{
+            background-color: #0993CF;
+            color: #ddd;
+        }
+        .bg-dark .nav > li > a:hover, .bg-dark .nav > li > a:focus{
+            background-color: #0993CF;
+        }
+        li:active > a, .bg-dark .nav > li.active > a{
+            background-color: #0993CF;
+        }
+       .btn-info,.btn-info:hover,.btn-info:focus,
+       .btn-info:active{
+           color: #fff !important;
+           background-color: #0993CF;
+           border-color: #0993CF;
+       }
+       .btn{
+           border-radius: 5px;
+       }
+        .btn-default {
+            color: #0993cf !important;
+            background-color: #fcfcfd;
+            border-color: #0993cf;
+            border-bottom-color: #0990cf;
+            -webkit-box-shadow: 0 1px 1px rgba(90,90,90,0.1);
+            box-shadow: 0 1px 1px rgba(90,90,90,0.1);
+        }
+        .btn-default:hover,.btn-default:focus{
+            border-color: #0993cf;
+        }
+        #cboxTitle {
+            font-size: 18px;
+            color: #8a8a8a;
+           background: #fff;
+            border-bottom: 1px solid #ccc;
+            height: 44px;
+            width: 100%;
+            text-indent: 1em;
+            position: absolute;
+            top: 0;
+            left: 0;
+            line-height: 44px;
+        }
+
+        .popup .btn_addPic {
+            display: inline-block;
+            position: relative;
+            padding: 0 12px;
+            height: 37px;
+            overflow: hidden;
+            background: #0993cf;
+            color: #fff;
+            font-size: 20px;
+            margin-bottom: 25px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .modal-open {
+           /* overflow: auto;*/
+            padding: 0 !important;
+        }
+
+        .modal.msg-popup {
+            /*top: auto;*/
+        }
+
+        .modal.msg-popup /*.modal-dialog */{
+            width: 450px !important;
+            margin: 30px auto 60px;
+        }
+
+        .modal.msg-popup .modal-body {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .modal.msg-popup /*.modal-content*/ {
+            border: none;
+        }
+    </style>
+</head>
+<body class="container"  >
+
+
+<!--<div class="modal fade" id="basic" tabindex="-1" role="basic" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+        <h4 class="modal-title">删除提示</h4>
+      </div>
+      <div class="modal-body">
+        您确定要删除？？？
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn  default btn-xs  btn-info" data-dismiss="modal ">取消</button>
+        <button type="button" id="deleteContent" data-dismiss="modal" class="btn btn-xs blue btn-danger">删除</button>
+      </div>
+    </div>
+    &lt;!&ndash; /.modal-content &ndash;&gt;
+  </div>
+  &lt;!&ndash; /.modal-dialog &ndash;&gt;
+</div>-->
+
+
+
+
+
+
+
+
+
+<div class="modal fade scjl" id="basic" tabindex="-1" role="basic" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+<div id="cboxContent" style="float: left; width: 450px; height: 287px;">
+    <div id="cboxLoadedContent" style="width: 450px; overflow: auto; height: 250px;">
+        <div id="uploadFile" class="popup">
+    <table width="100%">
+        <tbody><tr>
+            <td align="center">
+                <form>
+                    <a href="javascript:void(0);" class="btn_addPic center-block">
+                        <span>选择上传文件</span>
+                        <input tabindex="3" title="支持word、pdf、ppt、txt、wps格式文件，大小不超过10M" size="3" name="newResume" id="resumeUpload" class="filePrew" type="file" onchange="file_check(this,'http://www.lagou.com/nearBy/updateMyResume.json','resumeUpload')">
+                    </a>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td align="left">支持word、pdf、ppt、txt、wps格式文件<br>文件大小需小于10M</td>
+        </tr>
+        <tr>
+            <td align="left" style="color:#dd4a38; padding-top:10px;">注：若从其它网站下载的word简历，请将文件另存为.docx格式后上传</td>
+        </tr>
+        <tr>
+            <td align="center"><img src="http://www.lagou.com/images/loading.gif" width="55" height="16" id="loadingImg" style="visibility: hidden;" alt="loading"></td>
+        </tr>
+        </tbody></table>
+</div></div>
+    <div id="cboxTitle" style="float: left; display: block;">上传附件简历<span class=" btn btn-s-sm  close " data-dismiss="modal">×</span></div>
+    <div id="cboxCurrent" style="float: left; display: none;"></div>
+    <button type="button" id="cboxPrevious" style="display: none;"></button>
+    <button type="button" id="cboxNext" style="display: none;"></button>
+    <button id="cboxSlideshow" style="display: none;"></button>
+    <div id="cboxLoadingOverlay" style="float: left; display: none;">
+
+    </div>
+    <div id="cboxLoadingGraphic" style="float: left; display: none;"></div>
+    <button type="button" id="cboxClose">close</button>
+</div>
+
+</div></div></div>
+
+  <section class="vbox">
+    <header class=" header header-md navbar  navbar-fixed-top-xs box-shadow">
+      <div class="navbar-header aside-md dk">
+        <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen,open" data-target="#nav,html">
+          <i class="fa fa-bars"></i>
+        </a>
+        <a href="index.html" class="navbar-brand">
+         <img src="assets/images/面条校园透明logo.png"  alt="scale">
+          <span  style="color:#333 ">面条校园</span>
+        </a>
+        <a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".user">
+          <i class="fa fa-cog"></i>
+        </a>
+      </div>
+      
+      
+      <ul class="nav navbar-nav navbar-right m-n hidden-xs nav-user user nav-off-screen" style="background-color:#0993CF;height: 60px">
+        <li >
+          <a href="#basic" data-toggle="modal"    style="font-family: '微软雅黑 Bold', '微软雅黑'; font-size: 13px;height: 60px">
+           <!-- <span class="thumb-sm avatar pull-left">
+              <img src="images/a0.png" alt="...">
+            </span>
+            John.Smith <b class="caret"></b>-->
+              简历导入
+          </a>
+           </li>
+          <!--<ul class="dropdown-menu animated fadeInRight">
+            <li>
+              <span class="arrow top"></span>
+              <a href="简历导入.html">简历导入</a>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <a href="modal.lockme.html" data-toggle="ajaxModal" >登出</a>
+            </li>
+          </ul>
+        </li>
+      </ul>-->
+        <!--<ul class="nav navbar-nav navbar-right m-n hidden-xs nav-user user">直接导入电子简历
+            </ul>-->
+          <!--<button class="btn btn-danger  pull-right " style="height:45px"><span class="text" style="font-family: '微软雅黑 Bold', '微软雅黑';">直接导入电子简历</span></button>-->
+    </ul>
+    </header>
+    <section>
+      <section class="hbox stretch">
+        <!-- .aside -->
+        <aside class="bg-dark aside-md hidden-print hidden-xs" id="nav">          
+          <section class="vbox">
+            <section class="w-f scrollable">
+              <div class=" " data-height="auto" data-disable-fade-out="true" data-distance="0" data-size="10px" data-railOpacity="0.2">
+                <div class="clearfix wrapper dk nav-user hidden-xs">
+                  <div class="">       
+                      <span class="thumb avatar pull-left m-r">
+                           <input type="file"  id="choose" name="choose"  class="hidden">
+                        <img src="images/a0.png" onclick="choose.click()" class="dker" alt="...">
+                         <!-- <input name="ye" style="border: 1px solid white" >-->
+                        <i class="on md b-black"></i>&nbsp;Jessica
+
+                      </span>
+
+                  </div>
+                </div>
+
+
+                <!-- nav -->                 
+                <nav class="nav-primary hidden-xs">
+                  <div class="text-muted text-sm hidden-nav-xs padder m-t-sm m-b-sm">Start</div>
+                  <ul class="nav nav-main" data-ride="collapse">
+                    <li >
+                      <a href="#baseInfo" class="auto">
+                        <i class="iconfont">&#xe605;
+                        </i>
+                        <span class="font-bold">基本资料</span>
+                      </a>
+                    </li>
+                    <li >
+                      <a href="#myDot" class="auto">
+                        <i class="iconfont">&#xe600;
+                        </i>
+                        <span class="font-bold">我的亮点</span>
+                      </a>
+                    </li>
+                    <li >
+                      <a href="#myExperience" class="auto">
+                        <i class="iconfont">&#xe604;
+                        </i>
+                        <span class="font-bold">我的经历</span>
+                      </a>
+                    </li>
+                    <li >
+                      <a href="#mySkill" class="auto">
+                        <i class="iconfont">&#xe601;
+                        </i>
+                        <span class="font-bold">掌握技能</span>
+                      </a>
+                    </li>
+                    <li >
+                      <a href="#myGlory" class="auto">
+                        <i class="iconfont">&#xe603;
+                        </i>
+                        <span class="font-bold">获得荣誉</span>
+                      </a>
+                    </li>
+                  
+                  </ul>
+                </nav>
+                <!-- / nav -->
+              </div>
+            </section>
+            
+            <footer class="footer hidden-xs no-padder text-center-nav-xs">
+              <a href="modal.lockme.html" data-toggle="ajaxModal" class="btn btn-icon icon-muted btn-inactive pull-right m-l-xs m-r-xs hidden-nav-xs">
+                <i class="i i-logout"></i>
+              </a>
+              <a href="#nav" data-toggle="class:nav-xs" class="btn btn-icon icon-muted btn-inactive m-l-xs m-r-xs">
+                <i class="i i-circleleft text"></i>
+                <i class="i i-circleright text-active"></i>
+              </a>
+            </footer>
+          </section>
+        </aside>
+        <!-- /.aside -->
+         <section id="content">
+          <section class="vbox">
+            
+            <section class="scrollable wrapper">          
+              <div class="row">
+                
+                <div class="col-lg-12">
+                  <section class="panel panel-default">
+
+                  <header id = "baseInfo" class="panel-heading font-bold " ><i class="iconfont">&#xe605;
+                  </i>基本资料</header>
+                      <div class="col-lg-12" style="border-bottom: 1px solid #0993CF"></div>
+                    <div class="panel-body">
+                      <form role="form" data-validate="parsley" action="#">
+                        <div class="form-group col-lg-6">
+                          <label>姓名<span>&nbsp;Name:</span></label>
+                          <input type="text" class="form-control" data-required="true" data-maxlength="5" placeholder="请输入姓名（最多可输入5个字）">
+                        </div>
+                        <div class="form-group col-lg-6">
+                          <label>性别<span>&nbsp;Sex:</span></label>
+                          <!--<input type="password" class="form-control" placeholder="Password">-->
+                          <select class="form-control" data-required="true">
+                            <option value="">请选择</option>
+                           <option>男</option>
+                            <option>女</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-lg-6">
+                          <label>学校<span>&nbsp;University：</span></label>
+                          <!--<input type="password" class="form-control" placeholder="Password">-->
+                          <select data-required="true" class="form-control " >
+                            <option value="">请选择</option>
+                            <option>北京大学</option>
+                            <option>清华大学</option>
+                            <option>武汉大学</option>
+                            <option>南京大学</option>
+                            <option>中国地质大学</option>
+                            <option>华中科技大学</option>
+                            <option>四川大学</option>
+                            <option>武汉理工大学</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-lg-6">
+                          <label>学历<span>&nbsp;Education：</span></label>
+                          <!--<input type="password" class="form-control" placeholder="Password">-->
+                          <select class="form-control" data-required="true">
+                          <option value="">选择您的最高学历即可</option>
+                          <option>本科</option>
+                          <option>研究生</option>
+                          <option>高中</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-lg-6">
+                          <label>专业<span>&nbsp;Specialty：</span></label>
+                          <input type="text" class="form-control" data-required="true" placeholder="填写您的专业">
+                        </div>
+                        <div class="form-group col-lg-6">
+                          <label>入学时间<span>&nbsp;Time：</span></label>
+                          <input type="text" class="datepicker-input form-control " readonly="readonly" value="" data-date-format="yyyy-mm-dd" data-required="true" placeholder="选择您的入学时间">
+                        </div>
+                        <div class="form-group col-lg-6">
+                          <label>手机<span>&nbsp;Number：</span></label>
+                          <input type="text" class="form-control" data-required="true" data-type="phone" placeholder="常用手机号以便于HR联系您">
+                        </div>
+                        <div class="form-group col-lg-6">
+                          <label>邮箱<span>&nbsp;Email：</span></label>
+                          <input type="text" class="form-control" data-required="true" data-type="email" placeholder="填写您接收offer的邮箱">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-s-sm btn-info col-lg-4 col-lg-offset-4 m-t col-xs-12 submit" onclick="apply('#popupmsg_custom')">提交</button>
+                      </form>
+                    </div>
+                  </section>
+                </div>
+                <div class="col-lg-12">
+                  <section class="panel panel-default">
+                  <header id="myDot" class="panel-heading font-bold"><i class="iconfont">&#xe600;
+                  </i>我的亮点</header>
+                      <div class="col-lg-12" style="border-bottom: 1px solid #0993CF"></div>
+                    <div class="panel-body">
+                      <div class=" "><h4 class="m-t-xs">性格标签</h4></div>
+
+                      <div class="doc-buttons characs" >
+		                <a href="#" class="btn btn-s-sm btn-default tags m-t col-sm-offset-1 "    style="margin-right: 10px">外向乐观</a>
+                        <a href="#" class="btn btn-s-sm btn-default tags m-t "  style="margin-right: 10px">低调沉稳</a>
+		                <a href="#" class="btn btn-s-sm btn-default tags m-t"  style="margin-right: 10px">慢热</a>
+		                <a href="#" class="btn btn-s-sm btn-default tags m-t"  style="margin-right: 10px">效率至上</a>
+		                <a href="#" class="btn btn-s-sm btn-default tags m-t" style="margin-right: 10px">完美主义</a>
+		                <a href="#" class="btn btn-s-sm btn-default tags m-t"  style="margin-right: 10px">温文尔雅</a>
+		                <a href="#" class="btn btn-s-sm btn-default tags m-t col-lg-offset-1"  style="margin-right: 10px" >性情直爽</a>
+		                <a href="#" class="btn btn-s-sm btn-default tags m-t"  style="margin-right: 10px">平衡主义</a>
+		                <a href="#" class="btn btn-s-sm btn-default tags m-t"  style="margin-right: 10px">含蓄</a>
+		                <a href="#" class="btn btn-s-sm btn-default tags m-t"  style="margin-right: 10px">自来熟</a>
+		                <a href="#" class="btn btn-s-sm btn-default tags m-t" style="margin-right: 10px">随性</a>
+		               <a href="#" class="btn btn-s-sm btn-default tags m-t"  style="margin-right: 10px">正能量</a>
+		              </div>
+
+		             <div class=" m-t"> <h4 class="m-t-xs ">爱好标签 </h4></div>
+
+                      <div class="doc-buttons hobits" >
+		                <a href="#" class="btn btn-s-sm btn-default tagss m-t col-lg-offset-1" style="margin-right: 10px" >摄影</a>
+		                <a href="#" class="btn btn-s-sm btn-default tagss m-t" style="margin-right: 10px" >电影</a>
+		                <a href="#" class="btn btn-s-sm btn-default tagss m-t" style="margin-right: 10px" >戏剧</a>
+		                <a href="#" class="btn btn-s-sm btn-default tagss m-t"style="margin-right: 10px" >流行乐</a>
+		                <a href="#" class="btn btn-s-sm btn-default tagss m-t" style="margin-right: 10px" >古典乐</a>
+		                <a href="#" class="btn btn-s-sm btn-default tagss m-t" style="margin-right: 10px" >动漫</a>
+		                <a href="#" class="btn btn-s-sm btn-default tagss m-t col-lg-offset-1" style="margin-right: 10px" >电子</a>
+		                <a href="#" class="btn btn-s-sm btn-default tagss m-t" style="margin-right: 10px" >数码</a>
+		                <a href="#" class="btn btn-s-sm btn-default tagss m-t" style="margin-right: 10px" >旅行</a>
+		                <a href="#" class="btn btn-s-sm btn-default tagss m-t" style="margin-right: 10px" >美食</a>
+		                <a href="#" class="btn btn-s-sm btn-default tagss m-t" style="margin-right: 10px" >烹饪</a>
+		                <a href="#" class="btn btn-s-sm btn-default tagss m-t" style="margin-right: 10px" >宠物</a>
+		              </div>
+                     
+                        <br>
+                      <button type="submit" class="btn btn-s-sm btn-info col-lg-4 col-lg-offset-4 col-xs-12" onclick="apply('#popupmsg_custom')">提交</button>
+                     
+                    </div>
+               
+                  </section>
+                </div>
+                <div class="col-lg-12">
+                  <section class="panel panel-default " >
+                    <header id="myExperience" class="panel-heading font-bold"><i class="iconfont">&#xe604;
+                    </i>我的经历</header>
+                      <div class="col-lg-12" style="border-bottom: 1px solid #0993CF"></div>
+                    <div class="panel-body">
+                        <div class=" col-lg-12">
+                    	<section class="panel panel-info clear jl" id="jl1">
+                        <div class="panel-body">
+                          <a href="#" class="thumb pull-right m-l m-t-xs avatar">
+                          </a>
+
+                          <div class="clear col-lg-9">
+                            <h4><a href="#" class="text-info">华信软件技术有限公司-网页交互设计师<i class="icon-twitter"></i></a></h4>
+                            <p><small class="block text-muted"><a>产品研发部</a>|<a>2013至2014</a></small></p>
+                            <p>负责软件界面的美术设计、创意工作和制作工作；
+                            根据各种相关软件的用户群，提出构思新颖、吸引力的创意设计；
+                            对页面进行优化，是用户操作更趋于人性化；>
+                            维护现有的应用产品；
+                            收集和分析用户对于GUI的需求；</p>
+                          </div>
+                              <div class="clear col-lg-3">
+                            <a href="#" class="btn btn-xs btn-success m-t-xs  col-md-offset-5 jlchange" >修改</a>
+                            <a href="#" class="btn btn-xs btn-danger m-t-xs jldelete "  onclick="run('#localizationMsg')">删除</a>
+                              </div>
+                        </div>
+                      </section>
+                        </div>
+                       <!-- <div class="form-group col-lg-12">-->
+                        <!--<section class="panel panel-info clear jl hide" id="jl2" >
+                            <div class="panel-body">
+                                <a href="#" class="thumb pull-right m-l m-t-xs avatar">
+                                </a>
+
+                                    <div class="clear col-lg-9">
+                                        <h4><a href="#" class="text-info">法国凯捷-软件工程师<i class="icon-twitter"></i></a></h4>
+                                       <p><small class="block text-muted"><a>实习经历</a>|<a>2014至2015</a></small></p>
+                                        <p>负责软件界面的美术设计、创意工作和制作工作；
+                                        根据各种相关软件的用户群，提出构思新颖、吸引力的创意设计；
+                                        对页面进行优化，是用户操作更趋于人性化；
+                                       维护现有的应用产品；
+                                        收集和分析用户对于GUI的需求；</p>
+                                    </div>
+                                    <div class="clear col-lg-3 ">
+                                        <a href="#" class="btn btn-xs btn-success m-t-xs col-md-offset-5 jlchange">修改</a>
+                                        <a href="#basic" class="btn btn-xs btn-danger m-t-xs jldelete " data-toggle="modal" onclick="run('#localizationMsg')">删除</a>
+                                    </div>
+
+                                </div>
+
+                        </section>-->
+
+                            <section class='panel panel-info clear jlsec '>
+                                <div class='form-group col-lg-6'>  <label ><h4 class="m-t">什么经历</h4></label>
+                                    <select class='form-control'>
+                                        <option>请选择是校园经历还是实习经历</option>
+                                        <option>校园经历</option>
+                                        <option>实习经历</option> </select> </div>
+                                <div class='form-group col-lg-6'>  <label ><h4 class="m-t">什么时候</h4></label>
+                                    <select class='form-control'>
+                                        <option>请选择是校园经历还是实习经历</option>
+                                        <option>校园经历</option>
+                                        <option>实习经历</option>
+                                    </select> </div>
+                                <div class='form-group col-lg-12'>
+                                    <input type='text' placeholder='经历标题：请用一句话概括你的经历' class='form-control ' > </div>
+                                <div class='form-group col-lg-12'>
+                                    <textarea  placeholder='讲述你的经历：你的故事，最多不能超过300个字'  class='form-control ' > </textarea> </div>
+                                <div class='form-group col-lg-12'>
+                                    <button type='submit' class='btn btn-s-sm btn-info col-lg-4 col-lg-offset-1  jlsub' onclick="apply('#popupmsg_custom')">保存</button>
+                                    <button type='submit' class='btn btn-s-sm btn-success col-lg-4   col-lg-offset-2 canc' >取消</button>
+                                </div>
+                            </section>
+
+                        <!--</div>-->
+
+
+
+                      <div class="col-lg-12">
+                        <div style="text-align: center;" id="divadd">
+
+                      </div>
+                      </div>
+                       <div class="form-group col-lg-12">
+                      <section class="panel panel-info clear jladd"  id="add1">
+                          <div class="panel-body">
+                        <div style="text-align: center">
+                        <div > <h5 style="cursor: pointer;"><i class="iconfont"> &#xe602;&nbsp;</i>添加更多经历</h5></div>
+
+                         <!-- <img src="images/u176.png">-->
+
+                          </div>
+                     </div>
+                      </section>
+                  </div>
+
+                    </div>
+                  </section>
+                </div>
+                <div class="col-lg-12">
+                  <section class="panel panel-default">
+                  	<header id="mySkill" class="panel-heading font-bold"> <i class="iconfont">&#xe601;
+                    </i>掌握技能</header>
+                      <div class="col-lg-12" style="border-bottom:1px solid #0993CF"></div>
+                  	 <div class="panel-body">
+
+                  	 <form role="form" class="form">
+                       <div class=" jn" id="jn1">
+
+                        <div class="form-group col-lg-6">
+                          <input type="text" class="form-control" placeholder="英语水平">
+                        </div>
+
+ 						<div class="form-group col-lg-4">
+                          <select class="form-control " >
+                            <option>掌握程度</option>
+                            <option>一般</option>
+                            <option>熟练</option>
+                            <option>精通</option>
+                          </select>
+		            	</div>
+                       <div class="form-group col-lg-2">
+                         <a href="#" class="btn btn-xs btn-danger m-t-xs jndelete col-lg-offset-4"data-toggle="modal" onclick="run('#localizationMsg')">删除</a>
+                       </div>
+                       </div>
+
+                       <div class=" jn" id="jn2">
+		            	<div class="form-group col-lg-6">
+                          <input type="text" class="form-control" placeholder="Java">
+                        </div>
+
+ 						<div class="form-group col-lg-4">
+                          <select class="form-control "  >
+                            <option>掌握程度</option>
+                            <option>一般</option>
+                            <option>熟练</option>
+                            <option>精通</option>
+                          </select>
+		            	</div>
+                       <div class="form-group col-lg-2">
+                         <a href="#" class="btn btn-xs btn-danger m-t-xs jndelete col-lg-offset-4"  data-toggle="modal" onclick="run('#localizationMsg')">删除</a>
+                       </div>
+                                 </div>
+                         <div class=" jn" id="jn3">
+		            	<div class="form-group col-lg-6">
+                          <input type="email" class="form-control" placeholder="office办公软件">
+                        </div>
+
+ 						<div class="form-group col-lg-4">
+                          <select class="form-control"  >
+                            <option>掌握程度</option>
+                            <option>一般</option>
+                            <option>熟练</option>
+                            <option>精通</option>
+                          </select>
+		            	</div>
+                      <div class="form-group col-lg-2">
+                         <a href="#" class="btn btn-xs btn-danger m-t-xs jndelete col-lg-offset-4"  data-toggle="modal" onclick="run('#localizationMsg')">删除</a>
+                       </div>
+                      </div>
+                       <div class=""   id="divadd2">
+
+                       </div>
+
+		    		 
+                    </form>
+                   <div class="col-lg-12">
+                    <section class="panel panel-info clear" id="add2">
+                        <div class="panel-body">
+
+                          <div style="text-align: center">
+                          <div  > <h5 style="cursor: pointer;"><i class="iconfont"> &#xe602;&nbsp;</i>添加更多技能</h5></div>
+                         <!-- <img src="images/u176.png">-->
+
+                            </div>
+
+                      	</div>
+                    </section>
+                     </div>
+                  	<button type="submit" class="btn btn-s-sm btn-info col-lg-4 col-md-offset-4 col-xs-12 submit" onclick="apply('#popupmsg_custom')">提交</button>
+                  </div>
+        
+                  </section>
+                </div>
+                <div class="col-lg-12">
+                  <section class="panel panel-default">
+                  <header id="myGlory" class="panel-heading font-bold"><i class="iconfont">&#xe603;
+                  </i>获得荣誉/证书</header>
+                      <div class="col-lg-12" style="border-bottom: 1pt solid #0993CF"></div>
+                    <div class="panel-body">
+
+                  	 <form class=" form">
+                        <div id="ry1" >
+                        <div class="form-group col-lg-5">
+                          <label class="col-lg-3 control-label">名称</label>
+
+                            <input type="text" class="form-control "name="mc" id="mcid" placeholder="填写证书名称   例如：  英语四级（CET-4）">
+                           
+
+                        </div>
+                        <div class="form-group col-lg-5">
+                          <label class="col-lg-3 control-label ">详情</label>
+                            <input type="text" class="form-control" name="xq" id="xqid" placeholder="对证书补充说明  例如：521分">
+                        </div>
+                         <div class="form-group col-lg-2">
+                         <a href="#" class="btn btn-xs btn-danger m-t-lg rydelete col-md-offset-3"  data-toggle="modal" onclick="run('#localizationMsg')">删除</a>
+                                 </div>
+                        </div>
+                      <div  id="divadd3" class="row m-n" >
+
+
+                      </div>
+                        
+                    </form>
+                      <div  class="form-group col-lg-12">
+                       <section class="panel panel-info clear" id="add3">
+                        <div class="panel-body">
+
+                          <div style="text-align: center">
+                            <div  > <h5 style="cursor: pointer;"><i class="iconfont"> &#xe602;&nbsp;</i>添加更多证书</h5></div>
+                           <!-- <img src="images/u176.png">-->
+
+                          </div>
+                      	</div>
+                    </section>
+                        </div>
+                     <button type="submit" class="btn btn-s-sm btn-info col-lg-4 col-lg-offset-4 col-xs-12 submit"  >提交</button>
+
+                  	 </div>
+                  </section>
+                </div>
+               
+              </div>
+            </section>
+          </section>
+          <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
+        </section>
+      </section>
+    </section>
+  </section>
+  <script src="js/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="js/bootstrap.js"></script>
+  <!-- App -->
+  <script src="js/app.js"></script>
+ <script src="js/slimscroll/jquery.slimscroll.min.js"></script>
+<!-- datepicker -->
+<script src="js/datepicker/bootstrap-datepicker.js"></script>
+  <script src="js/datatables/jquery.dataTables.min.js"></script>
+<script src="js/datatables/jquery.csv-0.71.min.js"></script>
+<script src="js/datatables/demo.js"></script>
+<!--<script src="js/parsley/parsley.min.js"></script>-->
+<script src="js/parsley/parsley.min%20-%20Ch.js"></script>
+<script src="js/parsley/parsley.extend.js"></script>
+<script src="js/app.plugin.js"></script>
+<script src="js/jquery.bootstrap.js"></script>
+<script>
+    function apply(){
+        $.messager.popup("执行成功！");
+    }
+   function applyconf(){
+        $.messager.popup("该标签选择不得超过3个！");
+    }
+
+    function run(){
+        $.messager.model = {
+            ok:{ text: "删除", classed: 'deleteContent btn-success btn-sm'},
+            cancel: { text: "取消", classed: 'btn btn-danger btn-sm ' }
+        };
+        $.messager.confirm("删除提示", "确定要删除？？？", function() {
+            window.onclick=apply('#popupmsg_custom');
+
+        });
+    }
+
+    /*function runleave(){
+        $.messager.model = {
+            ok:{ text: "离开此页", classed: 'deleteContent btn-success btn-sm'},
+            cancel: { text: "留在此页", classed: 'btn btn-danger btn-sm ' }
+        };
+        $.messager.confirm("确认导航", "确定离开当前页面吗？？？？", function() {
+
+
+        });
+    }*/
+
+   /* function checkLeave(){
+        $.ajax({
+            type:"get",
+            url:"/change",
+            success: function (data) {
+                console.log(data);
+            }
+        })
+        event.returnValue="确定离开当前页面吗？";
+    }*/
+
+</script>
+
+<script type="text/javascript">
+
+        $(document).ready(function(){
+
+
+      /*性格标签点击变色*/
+
+            $(document).on("click",".tags",function(){
+
+            if($(".characs>.btn-info").length<3)
+            {
+
+                if($(this).hasClass('btn-info'))
+                {
+
+                    $(this).removeClass("btn-info").addClass("btn-default");
+                }
+                else
+                {
+                    $(this).removeClass("btn-default").addClass("btn-info");
+
+                }
+            }
+            else if($(".characs>.btn-info").length=3)
+            {
+
+
+                if($(this).hasClass('btn-info'))
+                {
+
+                    $(this).removeClass("btn-info").addClass("btn-default");
+
+                }
+                else
+                {
+                    window.onclick=applyconf('#popupmsg_custom');
+                }
+            }
+            else
+               /* return false;*/
+            {
+
+            }
+
+      })
+
+      /*爱好标签点击变色*/
+      $(document).on("click",".tagss",function(){
+
+          if($(".hobits>.btn-info").length<3)
+          {
+
+              if($(this).hasClass('btn-info'))
+              {
+                  $(this).removeClass("btn-info").addClass("btn-default");
+              }
+              else
+              {
+                  $(this).removeClass("btn-default").addClass("btn-info");
+
+              }
+          }
+          else if($(".hobits>.btn-info").length=3)
+              if($(this).hasClass('btn-info'))
+              {
+                  $(this).removeClass("btn-info").addClass("btn-default");
+              }
+              else
+                  window.onclick=applyconf('#popupmsg_custom');
+          else
+              return ;
+      })
+
+
+
+      $(".panel-info:not(.jl)").hover(function(){
+          $(this).css("border-color","#5CACEE");
+                  $("h5").css("color","#5CACEE")
+      },
+      function(){
+          $(this).css("border-color","#ddd");
+          $("h5").css("color","inherit")
+      });
+
+     /*动态添加*/
+    $("#add1").click(function(){
+      $("#divadd").append("<section class='panel panel-info clear jladd'> <div class='form-group col-lg-6'> <label> <h4>什么经历</h4></label> <select class='form-control'> <option>请选择是校园经历还是实习经历</option> <option>校园经历</option> <option>实习经历</option> </select> </div> <div class='form-group col-lg-6'>  <label><h4>什么时候</h4></label> <select class='form-control'> <option>请选择是校园经历还是实习经历</option> <option>校园经历</option> <option>实习经历</option> </select> </div> <div class='form-group col-lg-12'> <input type='text' placeholder='经历标题：请用一句话概括你的经历' class='form-control ' > </div> <div class='form-group col-lg-12'> <textarea  placeholder='讲述你的经历：你的故事，最多不能超过300个字'  class='form-control ' > </textarea> </div> <div class='form-group col-lg-12'> <button type='submit' class='btn btn-s-sm btn-info col-lg-4 col-lg-offset-1  jlsub' >保存</button> <button type='submit' class='btn btn-s-sm btn-success col-lg-4   col-lg-offset-2 canc' >取消</button> </div> </section> ");
+    });
+      var jnCount=4;
+      var ryCount=2;
+      var currentJnId="";
+      var currentRyId="";
+      var currentJlId="";
+      $(".jlsec").hide();
+      $(document).on("click",".jlchange",function(){
+          /*$(".jlsec").hide();*/
+          $(".jlsec").show();
+         $(this).parent().parent().parent().hide();
+      })
+      $(document).on("click",".jlsub",function(){
+         /* $(this).hide();*/
+        /*  $(".jladd").show();*/
+          /*$(".jl").removeClass("hide");*/
+         /*$(".jl").show();
+          $(".jlsec").hide();*/
+          $(this).parent().parent().hide();
+          $(this).parent().parent().prev().children().show();
+      })
+      $(document).on("click",".canc",function(){
+         /* $(".jlsec").hide();
+          $(".jl").show();*/
+          $(this).parent().parent().hide();
+          $(this).parent().parent().prev().children().show();
+      })
+
+    $("#add2").click(function(){
+      $("#divadd2").append("<div class='jn' id='jn"+jnCount+"'>  <div class='form-group col-lg-6' id='jndiv'> <input type='text' class='form-control ' placeholder='您要添加的技能' > </div> <div class='form-group col-lg-4' id='xzdiv'> <select class='form-control'  > <option>掌握程度</option> <option>一般</option> <option>熟练</option> <option>精通</option> </select> </div> <div class='form-group col-lg-2' id='jnscdiv'> <a href='#' class='btn btn-xs btn-danger m-t-xs jndelete col-lg-offset-4'  data-toggle='modal' onclick=\"run('#localizationMsg')\">删除</a> </div> </div>");
+      jnCount++;
+    })
+
+    $("#add3").click(function(){
+      $("#divadd3").append("<div id='ry"+ryCount+"'><div class='form-group col-lg-5' id='mcdiv'> <label class='col-lg-3 control-label'>名称</label> <input type='text' class='col-lg-5 form-control' placeholder='您要添加荣誉证书名称'> </div> <div class='form-group col-lg-5' id='xqdiv'> <label class='col-lg-3 control-label '>详情</label> <input type='text' class='col-lg-5 form-control' placeholder='详情'> </div> <div class='form-group col-lg-2' id='scdiv'> <a href='#' class='btn btn-xs btn-danger m-t-lg rydelete col-md-offset-3' data-toggle='modal' onclick=\"run('#localizationMsg')\">删除</a> </div></div>");
+
+    })
+      /*删除*/
+      $(document).on("click",".jndelete",function(){
+          currentJnId=$(this).parent().parent().attr("id");
+      });
+      $(document).on("click",".rydelete",function(){
+          currentRyId=$(this).parent().parent().attr("id");
+      });
+      $(document).on("click",".jldelete",function(){
+          currentJlId=$(this).parents(".jl").attr("id");
+      });
+      $(document).on("click",".deleteContent",function(){
+          $("#"+currentJnId).remove();
+          $("#"+currentRyId).remove();
+          $("#"+currentJlId).remove();
+      });
+  })
+
+
+</script>
+<script>
+
+   window.onbeforeunload = function()   {
+
+        return confirm("确定离开此页面吗？");
+        /*Showbo.Msg.confirm('此操作需要登录，您现在要登录吗？');*/
+        /*confirm("确定离开此页面吗？");*/
+        /* runleave('#localizationMsg');*/
+    }
+
+</script>
+</body>
+</html>

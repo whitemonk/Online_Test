@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" class="app">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>申请认证</title>
+    <meta name="description"
+          content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="css/animate.css" type="text/css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css"/>
+    <link rel="stylesheet" href="css/icon.css" type="text/css"/>
+    <link rel="stylesheet" href="css/font.css" type="text/css"/>
+    <link rel="stylesheet" href="css/app.css" type="text/css"/>
+    <!-- BEGIN THEME STYLES -->
+    <link rel="stylesheet" href="assets/css/noodles.css" type="text/css"/>
+    <!-- END THEME STYLES -->
+
+    <!--[if lt IE 9]>
+    <script src="js/ie/html5shiv.js"></script>
+    <script src="js/ie/respond.min.js"></script>
+    <script src="js/ie/excanvas.js"></script>
+    <![endif]-->
+
+    <!-- BEGIN CUSTOM STYLES -->
+
+    <!-- END CUSTOM STYLES -->
+    <style type="text/css">
+        .hr_border{
+            position: relative;
+            margin: 0px auto;
+            width: 1024px;
+            height: 625px;
+            background-color: #ffffff;
+            margin-top: 68px;
+            border-radius: 20px;
+        }
+        .hr_text{
+            position: absolute;
+
+            width: 1024px;
+        }
+        .hr_text h4{
+            color: #000000;
+            font-size: 15px;
+        }
+        .hr_text_h2{
+            font-size: 25px;
+            text-align: center;
+            color: #000000;
+            margin-top: 40px;
+        }
+        .hr_input{
+            position:absolute;
+            width: 70%;
+            left: 15%;
+            height: 42px;
+            border-radius: 6px;
+        }
+        .hr_button{
+            width: 460px;
+            height: 50px;
+            background-color: chocolate;
+            border-radius: 6px;
+            color: #fff;
+            line-height: 35px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body class="container">
+<section class="vbox">
+    <header class="bg-danger header header-md navbar navbar-fixed-top-xs box-shadow">
+        <div class="navbar-header aside-md dk">
+            <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen,open" data-target="#nav,html">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="#" class="navbar-brand">
+                <span class="hidden-nav-xs">面条校园</span>
+            </a>
+            <a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".user">
+                <i class="fa fa-cog"></i>
+            </a>
+        </div>
+
+        <ul class="nav navbar-nav active navbar-left m-n hidden-xs ">
+            <li>
+                <a href="hr后台.html">
+                    简历
+                </a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-left m-n hidden-xs">
+            <li class="">
+                <a href="笔试列表.html">
+                    在线考试
+                </a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-left m-n hidden-xs">
+            <li class="">
+                <a href="#">
+                    更多
+                </a>
+            </li>
+        </ul>
+
+
+        <ul class="nav navbar-nav navbar-right m-n hidden-xs nav-user user">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <span class="thumb-sm avatar pull-left">
+              <img src="images/a0.png" alt="...">
+            </span>
+                    John.Smith <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu animated fadeInRight">
+                    <li>
+                        <span class="arrow top"></span>
+                        <a href="#">简历导出</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="modal.lockme.html" data-toggle="ajaxModal">登出</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+
+    <section>
+        <section class="hbox stretch">
+            <section id="content">
+                <!-- BEGIN CONTENT -->
+                <!--   begin border   -->
+                <div class="hr_border">
+                    <!--   验证部分    -->
+                    <div class="hr_text">
+                        <h2 class="hr_text_h2"><b>申请认证</b></h2>
+                        <div style="position: relative;margin: 0px auto;width: 1024px;">
+                            <h4 style="margin-left: 15%;">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</h4>
+                            <input class="form-control hr_input"
+                                   type="username" placeholder="请填写您的姓名">
+                        </div>
+                        <div style="margin-top: 60px;">
+                            <h4 style="margin-left: 15%;">公司名称</h4>
+                            <input class="form-control hr_input"
+                                   type=""  placeholder="请填写您所在公司的全称">
+                        </div>
+                        <div style="margin-top: 60px;">
+                            <h4 style="margin-left: 15%;">联系方式</h4>
+                            <input class="form-control hr_input"
+                                   type=""  placeholder="请填写您的手机号或公司的联系方式">
+                        </div>
+                        <div style="margin-top: 90px;text-align: center;">
+                            <a class="btn hr_button">提交申请</a>
+                        </div>
+
+                    </div>
+                    <!--      插图部分      -->
+                    <div style="width:1024px;position: absolute;margin-top: 425px;border-top: 2px solid #F5F5F5;">
+                        <img class="col-md-offset-2 col-sm-offset-1 col-xs-offset-1" style="margin-top: 13px;"
+                             src="./assets/images/插画-拷贝-4.png">
+                    </div>
+                </div>
+
+
+
+
+
+                <!-- BEGIN CONTENT -->
+            </section>
+        </section>
+    </section>
+
+    <!--END CONTENT -->
+</section>
+
+<!-- BEGIN MODAL -->
+
+
+
+
+
+
+<!-- BEGIN MODAL -->
+
+<script type='text/javascript' src=js/jquery.min.js></script>
+<!-- Bootstrap -->
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<!-- App -->
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/slimscroll/jquery.slimscroll.min.js"></script>
+<script type="text/javascript" src="js/app.plugin.js"></script>
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+
+
+
+
+<!-- END PAGE LEVEL SCRIPTS -->
+</body>
+</html>
