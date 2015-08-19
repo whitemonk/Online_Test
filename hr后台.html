@@ -40,6 +40,18 @@
         !important;
         }
 
+        .header-font {
+            color: #ffffff;
+        }
+
+        .cut-line {
+            width: 1px;
+            height: 57px;
+            background-color: #DADADA;
+            float: right;
+            margin-right: -10px;
+        }
+
         .iconfont {
             font-family: "iconfont" !important;
             font-size: 35px;
@@ -377,9 +389,9 @@
             left: 15%;
             width: 2px;
         }
-.modal-head{
-    background: #e5e5e5;
-}
+        .modal-head{
+            background: #e5e5e5;
+        }
 
     </style>
     <!-- END CUSTOM STYLES -->
@@ -438,7 +450,7 @@
                     </li>
                     <li class="divider"></li>
                     <li>
-                        <a href="modal.lockme.html" data-toggle="ajaxModal">登出</a>
+                        <a href="#" data-toggle="ajaxModal">登出</a>
                     </li>
                 </ul>
             </li>
@@ -451,52 +463,125 @@
                 <!-- BEGIN CONTENT -->
                 <section class="vbox ">
                     <section class=" scrollable wrapper">
-                        <div class="row  ">
-                            <!-- content -->
-                            <div id="content-5" class="horizontal-images light ">
 
-                                <div class="btn-group ">
-                                    <button class="btn btn1 btn-default col-lg-1 ">
-                                        <div style="height:10px "></div>
-                                  <span class="m-b-xs block">
-                                    <i class="iconfont">&#xe607;</i>
-                                  </span>
-                                        <small class="text-muted">待查看</small>
-                                    </button>
 
-                                    <button type="button" id="new2" class="btn btn1 btn-default col-lg-1">
-                                        <div style="height:10px ">
+
+                        <!--<div class="row  ">-->
+                            <!--&lt;!&ndash; content &ndash;&gt;-->
+                            <!--<div id="content-5" class="horizontal-images light ">-->
+
+                                <!--<div class="btn-group ">-->
+                                    <!--<button class="btn btn1 btn-default col-lg-1 ">-->
+                                        <!--<div style="height:10px "></div>-->
+                                  <!--<span class="m-b-xs block">-->
+                                    <!--<i class="iconfont">&#xe607;</i>-->
+                                  <!--</span>-->
+                                        <!--<small class="text-muted">待查看</small>-->
+                                    <!--</button>-->
+
+                                    <!--<button type="button" id="new2" class="btn btn1 btn-default col-lg-1">-->
+                                        <!--<div style="height:10px ">-->
+                                        <!--</div>-->
+                           <!--<span class="m-b-xs block">-->
+                              <!--<i class="iconfont">&#xe609;</i>-->
+                           <!--</span>-->
+                                        <!--<small class="text-muted" id="new">新建类别</small>-->
+
+
+                                    <!--</button>-->
+                                    <!--<button type="button" class="btn btn1 btn-default col-lg-1">-->
+                                        <!--<div style="height:10px ">-->
+                                        <!--</div>-->
+                           <!--<span class="m-b-xs block">-->
+                              <!--<i class="iconfont">&#xe606;</i>-->
+                           <!--</span>-->
+                                        <!--<small class="text-muted">已淘汰</small>-->
+
+
+                                    <!--</button>-->
+                                    <!--<button type="button" class="btn btn1 btn-default col-lg-1">-->
+                                        <!--<div style="height:10px ">-->
+                                        <!--</div>-->
+                           <!--<span class="m-b-xs block">-->
+                              <!--<i class="iconfont">&#xe605;</i>-->
+                           <!--</span>-->
+                                        <!--<small class="text-muted">全部简历</small>-->
+
+                                    <!--</button>-->
+
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <div class="row">
+                            <div class="col-lg-12" style="margin-bottom: -20px">
+                                <div class="panel text-center" style="background-color: #262734;" >
+                                    <div class="row">
+
+
+                                        <div class="col-lg-1 m-t-sm">
+                                            <a href="#">
+                                                <h4 class="orange-font m-t-md m-l-md header-font">返回</h4>
+                                            </a>
                                         </div>
-                           <span class="m-b-xs block">
-                              <i class="iconfont">&#xe609;</i>
-                           </span>
-                                        <small class="text-muted" id="new">新建类别</small>
 
-
-                                    </button>
-                                    <button type="button" class="btn btn1 btn-default col-lg-1">
-                                        <div style="height:10px ">
+                                        <div class="col-lg-6 col-lg-offset-2  m-t-sm">
+                                            <h3  class="header-font">Java开发工程师</h3>
                                         </div>
-                           <span class="m-b-xs block">
-                              <i class="iconfont">&#xe606;</i>
-                           </span>
-                                        <small class="text-muted">已淘汰</small>
 
 
-                                    </button>
-                                    <button type="button" class="btn btn1 btn-default col-lg-1">
-                                        <div style="height:10px ">
+                                        <div class="bg-danger pull-right" style="margin-right: 14px">
+                                            <ul class="nav navbar-nav">
+                                                <li class="">
+                                                    <a href="#"  style="width: 100px;!important;display: inline-block">
+                                                        <p class="font-bold">4</p>
+                                                        <p class="header-font">待查看</p>
+                                                    </a>
+                                                </li>
+                                            </ul>
                                         </div>
-                           <span class="m-b-xs block">
-                              <i class="iconfont">&#xe605;</i>
-                           </span>
-                                        <small class="text-muted">全部简历</small>
 
-                                    </button>
-
+                                        <div class="bg-danger pull-right">
+                                            <ul class="nav navbar-nav">
+                                                <li class="">
+                                                    <a href="#"   style="width: 100px;!important;display: inline-block;">
+                                                        <p class="header-font font-bold">253</p>
+                                                        <p class="header-font">总参加人数</p>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
+                            <div class="col-lg-12">
+                                <section class="panel text-center" >
+
+                                    <div class="panel-body text-center" style="border-bottom:3px solid #E65C16;">
+                                        <div class="row">
+                                            <div class="col-lg-3 ">
+                                                <div class="cut-line"></div>
+                                                <p class="orange-font text-lg ">30min</p>
+                                                <p class="text-black">答题时间</p>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <div class="cut-line"></div>
+                                                <p class="orange-font text-lg ">60分</p>
+                                                <p class="text-black">推荐通过分数</p>
+                                            </div>
+                                            <div class="col-lg-3 ">
+                                                <div class="cut-line"></div>
+                                                <p class="orange-font text-lg">Java开发工程师</p>
+                                                <p class="text-black">当前使用试卷</p>
+                                            </div>
+
+                                            <div class="col-lg-3  m-t-md text-lg">
+                                                <a href="#">查看/更换试卷</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
                         </div>
                         <div class="panel panel-default" style="margin-top: 15px">
                             <div class=" panel-heading clearfix" style="padding:10px 0px">
@@ -610,7 +695,7 @@
                                 <div class="col-lg-2"></div>
                                 <div class="col-lg-3 m-b-sm">
                                     <div class=" input-group input-group-btn  text-sm">
-                                        <input type="text" class="form-control" placeholder="筛选" style="width: 220px">
+                                        <input type="text" class="form-control" placeholder="筛选" style="width: 220px;">
                                         <button type="button" class="btn btn-default " id="panel-drop-down"><span
                                                 class="caret"></span></button>
                                         <div class="select panel panel-default animated fadeInRight   pull-left pos-abt m-t-xs clearfix"
@@ -656,17 +741,20 @@
                                                         <option class="text-sm" value="-1">二本院校</option>
                                                     </select>
                                                 </div>
-                                                <div class=" m-t-md col-lg-12 ">
-                                                    <button class="hide-select btn btn-default center-block"
-                                                            style="background:#e65c16;color: #FFFFFF !important;border: #bd5014">
-                                                        确定
-                                                    </button>
+                                                <div class="col-lg-12 m-b-sm">
+                                                    <div class=" m-t-sm col-lg-6 ">
+                                                        <button class="hide-select btn btn-default center-block"
+                                                                style="background:#e65c16;color: #FFFFFF !important;border: #bd5014">
+                                                            确定
+                                                        </button>
+                                                    </div>
+                                                    <div class=" m-t-sm col-lg-6">
+                                                        <button class="hide-select btn btn-select btn-default center-block ">
+                                                            取消
+                                                        </button>
+                                                    </div>
                                                 </div>
-                                                <div class=" m-t-sm col-lg-12 m-b-md">
-                                                    <button class="hide-select btn btn-select btn-default center-block ">
-                                                        取消
-                                                    </button>
-                                                </div>
+
                                             </div>
 
                                         </div>
@@ -675,10 +763,11 @@
                                 </div>
 
 
+
                                 <div class="table-responsive ">
                                     <table class="table  table-hover  b-t b-light">
                                         <thead>
-                                        <tr class="active">
+                                        <tr class="">
                                             <th><label class="checkbox m-l-md m-t-none m-b-none i-checks"><input
                                                     type="checkbox"><i></i></label></th>
                                             <th class="dispare">头像</th>
@@ -689,7 +778,8 @@
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        <tr class="active">
+
+                                        <tr onclick="doclick()" data-toggle="modal">
                                             <td><label class="checkbox m-l-md m-t-none m-b-none i-checks"><input
                                                     type="checkbox" name="post[]"><i></i></label></td>
                                             <td class="dispare">
@@ -699,7 +789,7 @@
 
                                             </td>
                                             <td class="detail">
-                                                <div><a href="#resume" data-toggle="modal">马晨</a></div>
+                                                <div>马晨</div>
                                             </td>
                                             <td class="detail">北京大学</td>
                                             <td class="detail">计算机科学与技术</td>
@@ -786,103 +876,8 @@
                                             </td>
                                         </tr>
 
-                                        <tr class="active">
-                                            <td><label class="checkbox m-l-md  m-t-none m-b-none i-checks"><input
-                                                    type="checkbox" name="post[]"><i></i></label></td>
-                                            <td class="dispare">
-                                                  <span class="thumb-sm avatar">
-                                                      <img src="images/a0.png" alt="...">
-                                                  </span>
 
-                                            </td>
-                                            <td class="detail"><a href="#resume1" data-toggle="modal"
-                                                                  style="vertical-align: middle">马晨</a></td>
-                                            <td class="detail">北京大学</td>
-                                            <td class="detail">计算机科学与技术</td>
-                                            <td>
-                                                <a class="m-r-sm" href="#">
-                                                    <i class="iconfont south" data-toggle="tooltip"
-                                                       data-original-title="下载">&#xe603</i>
-                                                </a>
-                                                <a class="m-r-sm" href="#">
-                                                    <i class="iconfont south" data-toggle="tooltip"
-                                                       data-original-title="删除">&#xe602;</i>
-                                                </a>
-                                                <a href="#" class="m-r-sm dropdown-toggle" data-toggle="dropdown">
-                                                    <i class="iconfont south" data-toggle="tooltip"
-                                                       data-original-title="移动">&#xe60a;</i></a>
-                                                <section class="dropdown-menu aside-lg bg-white on animated fadeInLeft"
-                                                         style="margin-left: -150px">
-                                                    <div class="row m-l-none m-r-none m-t m-b text-center">
-                                                        <div class="col-xs-4">
-                                                            <div class="padder-v">
-                                                                <a href="#">
-                                                                      <span class="m-b-xs block">
-                                                                          <i class="i i-mail i-2x text-primary-lt"></i>
-                                                                      </span>
-                                                                    <small class="text-muted">分组一</small>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-xs-4">
-                                                            <div class="padder-v">
-                                                                <a href="#">
-                                                                      <span class="m-b-xs block">
-                                                                          <i class="i i-map i-2x text-success-lt"></i>
-                                                                      </span>
-                                                                    <small class="text-muted">分组二</small>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xs-4">
-                                                            <div class="padder-v">
-                                                                <a href="#">
-                                                                      <span class="m-b-xs block">
-                                                                          <i class="i i-paperplane i-2x text-info-lt"></i>
-                                                                      </span>
-                                                                    <small class="text-muted">分组三</small>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xs-4">
-                                                            <div class="padder-v">
-                                                                <a href="#">
-                                                                      <span class="m-b-xs block">
-                                                                          <i class="i i-images i-2x text-muted"></i>
-                                                                      </span>
-                                                                    <small class="text-muted">分组四</small>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-xs-4">
-                                                            <div class="padder-v">
-                                                                <a href="#">
-                                                                      <span class="m-b-xs block">
-                                                                          <i class="i i-calendar i-2x text-danger-lt"></i>
-                                                                      </span>
-                                                                    <small class="text-muted">分组五</small>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xs-4">
-                                                            <div class="padder-v">
-                                                                <a href="#">
-                                                                      <span class="m-b-xs block">
-                                                                          <i class="i i-clock i-2x text-warning-lter"></i>
-                                                                      </span>
-                                                                    <small class="text-muted">分组六</small>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </section>
-
-                                            </td>
-                                        </tr>
-
-                                        <tr class="active">
+                                        <tr onclick="doclick()"  data-toggle="modal">
                                             <td><label class="checkbox m-l-md  m-t-none m-b-none i-checks"><input
                                                     type="checkbox" name="post[]"><i></i></label></td>
                                             <td class="dispare">
@@ -976,7 +971,7 @@
                                             </td>
                                         </tr>
 
-                                        <tr class="active">
+                                        <tr onclick="doclick()" data-toggle="modal">
                                             <td><label class="checkbox m-l-md  m-t-none m-b-none i-checks"><input
                                                     type="checkbox" name="post[]"><i></i></label></td>
                                             <td class="dispare">
@@ -1070,7 +1065,7 @@
                                             </td>
                                         </tr>
 
-                                        <tr class="active">
+                                        <tr onclick="doclick()" data-toggle="modal">
                                             <td><label class="checkbox m-l-md  m-t-none m-b-none i-checks"><input
                                                     type="checkbox" name="post[]"><i></i></label></td>
                                             <td class="dispare">
@@ -1164,7 +1159,7 @@
 
                                             </td>
                                         </tr>
-                                        <tr class="active">
+                                        <tr onclick="doclick()" data-toggle="modal">
                                             <td><label class="checkbox m-l-md  m-t-none m-b-none i-checks"><input
                                                     type="checkbox" name="post[]"><i></i></label></td>
                                             <td class="dispare">
@@ -1259,7 +1254,7 @@
                                             </td>
                                         </tr>
 
-                                        <tr class="active">
+                                        <tr onclick="doclick()" data-toggle="modal">
                                             <td><label class="checkbox m-l-md  m-t-none m-b-none i-checks"><input
                                                     type="checkbox" name="post[]"><i></i></label></td>
                                             <td class="dispare">
@@ -1523,44 +1518,44 @@
                                                     <img src="./assets/images/photo-1429305336325-b84ace7eba3b.png"
                                                          style="width: 100%;height: 200px">
                                                     <div class="col-lg-12 modal-head ">
-                                                    <div class="col-lg-3">
+                                                        <div class="col-lg-3">
                                                     <span class=" avatar pull-left m-l-lg"
                                                           style="margin-top: -58px;height: 100px;width: 100px;border: 7px solid rgba(252, 252, 253, 0.19)">
                                                         <img src="images/a0.png">
                                                     </span>
-                                                    </div>
-                                                    <div class="col-lg-9 m-t-sm m-b-sm">
-                                                        <p class="m-n" style="font-weight: 500">
-                                                            <span>大明</span>
+                                                        </div>
+                                                        <div class="col-lg-9 m-t-sm m-b-sm">
+                                                            <p class="m-n" style="font-weight: 500">
+                                                                <span>大明</span>
                                                             <span><i class="iconfont "
                                                                      style="font-size: 20px;color: #4e4e4e;">
                                                                 &#xe61c;</i></span>
-                                                            <span class="small-font">上海市</span>
-                                                        </p>
+                                                                <span class="small-font">上海市</span>
+                                                            </p>
 
-                                                        <p class="m-n">
-                                                            <span class="small-font">上海交通大学</span>
-                                                            <span class="small-font">本科</span>
-                                                            <span class="small-font">计算机技术应用</span>
-                                                            <span class="small-font">2015届</span>
-                                                        </p>
+                                                            <p class="m-n">
+                                                                <span class="small-font">上海交通大学</span>
+                                                                <span class="small-font">本科</span>
+                                                                <span class="small-font">计算机技术应用</span>
+                                                                <span class="small-font">2015届</span>
+                                                            </p>
 
-                                                        <p class="m-n">
-                                                            <span class="small-font">手机：13698745879</span>
-                                                            <span class="small-font">邮箱：587988785@qq.com</span>
+                                                            <p class="m-n">
+                                                                <span class="small-font">手机：13698745879</span>
+                                                                <span class="small-font">邮箱：587988785@qq.com</span>
 
-                                                        </p>
+                                                            </p>
 
-                                                        <p class="m-t-xs">
-                                                            <span class="small-font small-color ">阳光</span>
-                                                            <span class="small-font small-color">C++</span>
-                                                            <span class="small-font small-color">旅游</span>
-                                                            <span class="small-font small-color">上网</span>
-                                                            <span class="small-font small-color">旅游</span>
-                                                            <span class="small-font small-color">上网</span>
-                                                        </p>
+                                                            <p class="m-t-xs">
+                                                                <span class="small-font small-color ">阳光</span>
+                                                                <span class="small-font small-color">C++</span>
+                                                                <span class="small-font small-color">旅游</span>
+                                                                <span class="small-font small-color">上网</span>
+                                                                <span class="small-font small-color">旅游</span>
+                                                                <span class="small-font small-color">上网</span>
+                                                            </p>
 
-                                                    </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="panel-body vbox">
@@ -1941,45 +1936,45 @@
                                                 <div class="panel-heading col-lg-12">
                                                     <img src="./assets/images/photo-1429305336325-b84ace7eba3b.png"
                                                          style="width: 100%;height: 200px">
-                                                  <div class="col-lg-12 modal-head">
-                                                    <div class="col-lg-3">
+                                                    <div class="col-lg-12 modal-head">
+                                                        <div class="col-lg-3">
                                                         <span class=" avatar pull-left m-l-lg"
-                                                          style="margin-top: -58px;height: 100px;width: 100px;border: 7px solid rgba(252, 252, 253, 0.19)">
+                                                              style="margin-top: -58px;height: 100px;width: 100px;border: 7px solid rgba(252, 252, 253, 0.19)">
                                                         <img src="images/a0.png">
                                                         </span>
-                                                    </div>
-                                                    <div class="col-lg-9 m-t-sm m-b-sm">
-                                                        <p class="m-n" style="font-weight: 500">
-                                                            <span>大明</span>
+                                                        </div>
+                                                        <div class="col-lg-9 m-t-sm m-b-sm">
+                                                            <p class="m-n" style="font-weight: 500">
+                                                                <span>大明</span>
                                                             <span><i class="iconfont "
                                                                      style="font-size: 20px;color: #4e4e4e;">
                                                                 &#xe61c;</i></span>
-                                                            <span class="small-font">上海市</span>
-                                                        </p>
+                                                                <span class="small-font">上海市</span>
+                                                            </p>
 
-                                                        <p class="m-n">
-                                                            <span class="small-font">上海交通大学</span>
-                                                            <span class="small-font">本科</span>
-                                                            <span class="small-font">计算机技术应用</span>
-                                                            <span class="small-font">2015届</span>
-                                                        </p>
+                                                            <p class="m-n">
+                                                                <span class="small-font">上海交通大学</span>
+                                                                <span class="small-font">本科</span>
+                                                                <span class="small-font">计算机技术应用</span>
+                                                                <span class="small-font">2015届</span>
+                                                            </p>
 
-                                                        <p class="m-n">
-                                                            <span class="small-font">手机：13698745879</span>
-                                                            <span class="small-font">邮箱：587988785@qq.com</span>
+                                                            <p class="m-n">
+                                                                <span class="small-font">手机：13698745879</span>
+                                                                <span class="small-font">邮箱：587988785@qq.com</span>
 
-                                                        </p>
+                                                            </p>
 
-                                                        <p class="m-t-xs">
-                                                            <span class="small-font small-color ">阳光</span>
-                                                            <span class="small-font small-color">C++</span>
-                                                            <span class="small-font small-color">旅游</span>
-                                                            <span class="small-font small-color">上网</span>
-                                                            <span class="small-font small-color">旅游</span>
-                                                            <span class="small-font small-color">上网</span>
-                                                        </p>
+                                                            <p class="m-t-xs">
+                                                                <span class="small-font small-color ">阳光</span>
+                                                                <span class="small-font small-color">C++</span>
+                                                                <span class="small-font small-color">旅游</span>
+                                                                <span class="small-font small-color">上网</span>
+                                                                <span class="small-font small-color">旅游</span>
+                                                                <span class="small-font small-color">上网</span>
+                                                            </p>
+                                                        </div>
                                                     </div>
-                                                  </div>
                                                 </div>
                                                 <div class="vbox panel-body ">
 
@@ -2207,80 +2202,6 @@
 
 <script type="text/javascript">
 
-    $(document).ready(function () {
-
-        /*调整顶部文件夹条*/
-
-        function ajustFile() {
-            var num = $("#content-5 div button").length;
-
-            if (num < 8) {
-                $("#content-5").attr({style: "width:" + (num * 100 - 2) + "px"});
-            }
-
-        }
-
-        ajustFile();
-
-        /*新建 重命名*/
-        var Count = 6;
-        var CountR = 0;
-        $("#new2").click(function () {
-
-            $("#new2").after(" <button type='button' id='new" + Count + "' class='btn btn1 btn-default col-lg-1 '> <div style='height:10px' ><a href='#'><i  class='glyphicon glyphicon-remove' id></i></a><a href='#'><i  class='iconfont glyphicon-rename ' >&#xe60b;</i></a></div><span class='m-b-xs block'> <i  class='iconfont'>&#xe604;</i> </span> <small class='text-muted' ></small> <small class='text-muted' id='test" + CountR + "'></small> <input type='email'  placeholder='自定义' class='text-center no-border text-muted  Rm ' style='width: 60px' ></button>");
-
-
-            /*删除提示模态*/
-            $(".glyphicon-remove").click(function () {
-                $.messager.model = {
-                    ok: {text: "删除", classed: 'btn-default'},
-                    cancel: {text: "取消", classed: 'btn-error'}
-                };
-                $.messager.confirm("删除提示", "您确定要删除该类别吗？", function () {
-                    alert("删除成功！").css("margin-top", "200px")
-                });
-            })
-
-            // 调整顶部文件夹条
-            ajustFile();
-
-
-            Count++;
-            CountR++;
-            $('.Rm').bind('keypress', function (event) {
-
-
-                if (event.keyCode == "13") {
-                    var rmId = $(this).parent();
-                    var RmValue = $(this).val();
-                    var rmPlaceholder = $(this).attr("placeholder");
-                    if (RmValue == "") {
-                        rmId.append(rmPlaceholder);
-                        $(this).remove();
-                    } else {
-                        rmId.append(RmValue);
-                        $(this).remove();
-                    }
-
-
-                }
-
-            });
-
-        });
-
-    });
-
-
-    /*上部滚动条*/
-
-    $("#content-5").mCustomScrollbar({
-        axis: "x",
-        theme: "dark-thin",
-        autoExpandScrollbar: true,
-        advanced: {autoExpandHorizontalScroll: true}
-    });
-
 
     /*隐藏显示筛选部分*/
 
@@ -2293,6 +2214,25 @@
 
 
 </script>
+
+
+
+<script>
+    window.onload=init;
+    function init(){
+        var trs=documents.getElmentsByTagName('TR');
+        for(var i=0;i<trs.length;i++) {
+            trs[i].onclick = doclick;
+        }
+    }
+
+    function doclick(){
+        //modal('#resume1');
+        $("#resume1").modal();
+    }
+</script>
+
+
 <!-- datepicker-->
 <script type="text/javascript" src="assets/plug-in/datetimepicker/bootstrap-datepicker.js"></script>
 <script type="text/javascript" src="assets/plug-in/datetimepicker/bootstrap-datepicker.zh-CN.js"></script>
