@@ -393,6 +393,12 @@
             background: #e5e5e5;
         }
 
+        /*.blink{*/
+            /*border: 3px solid #87ceeb;*/
+        /*}*/
+        /*.blink:hover{*/
+            /*border: 3px solid #ea5137;*/
+        /*}*/
     </style>
     <!-- END CUSTOM STYLES -->
 
@@ -434,7 +440,6 @@
             </li>
         </ul>
 
-
         <ul class="nav navbar-nav navbar-right m-n hidden-xs nav-user user">
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -463,55 +468,6 @@
                 <!-- BEGIN CONTENT -->
                 <section class="vbox ">
                     <section class=" scrollable wrapper">
-
-
-
-                        <!--<div class="row  ">-->
-                            <!--&lt;!&ndash; content &ndash;&gt;-->
-                            <!--<div id="content-5" class="horizontal-images light ">-->
-
-                                <!--<div class="btn-group ">-->
-                                    <!--<button class="btn btn1 btn-default col-lg-1 ">-->
-                                        <!--<div style="height:10px "></div>-->
-                                  <!--<span class="m-b-xs block">-->
-                                    <!--<i class="iconfont">&#xe607;</i>-->
-                                  <!--</span>-->
-                                        <!--<small class="text-muted">待查看</small>-->
-                                    <!--</button>-->
-
-                                    <!--<button type="button" id="new2" class="btn btn1 btn-default col-lg-1">-->
-                                        <!--<div style="height:10px ">-->
-                                        <!--</div>-->
-                           <!--<span class="m-b-xs block">-->
-                              <!--<i class="iconfont">&#xe609;</i>-->
-                           <!--</span>-->
-                                        <!--<small class="text-muted" id="new">新建类别</small>-->
-
-
-                                    <!--</button>-->
-                                    <!--<button type="button" class="btn btn1 btn-default col-lg-1">-->
-                                        <!--<div style="height:10px ">-->
-                                        <!--</div>-->
-                           <!--<span class="m-b-xs block">-->
-                              <!--<i class="iconfont">&#xe606;</i>-->
-                           <!--</span>-->
-                                        <!--<small class="text-muted">已淘汰</small>-->
-
-
-                                    <!--</button>-->
-                                    <!--<button type="button" class="btn btn1 btn-default col-lg-1">-->
-                                        <!--<div style="height:10px ">-->
-                                        <!--</div>-->
-                           <!--<span class="m-b-xs block">-->
-                              <!--<i class="iconfont">&#xe605;</i>-->
-                           <!--</span>-->
-                                        <!--<small class="text-muted">全部简历</small>-->
-
-                                    <!--</button>-->
-
-                                <!--</div>-->
-                            <!--</div>-->
-                        <!--</div>-->
                         <div class="row">
                             <div class="col-lg-12" style="margin-bottom: -20px">
                                 <div class="panel text-center" style="background-color: #262734;" >
@@ -576,7 +532,7 @@
                                             </div>
 
                                             <div class="col-lg-3  m-t-md text-lg">
-                                                <a href="#">查看/更换试卷</a>
+                                                <a href="#" data-toggle="modal" data-target="#myModal">查看/更换试卷</a>
                                             </div>
                                         </div>
                                     </div>
@@ -1384,7 +1340,7 @@
 </section>
 
 <!-- BEGIN MODAL -->
-<!--模态框1-->
+<!--1.功能modal-->
 <div class="modal fade" id="resume" tabindex="-1" role="resume" aria-hidden="true">
     <a class="modal_prev" style="z-index: 100"></a>
     <a class="modal_next"></a>
@@ -1805,11 +1761,12 @@
     </div>
     <!-- /.modal-content -->
 </div>
-<!-- /.modal 1--->
-<!--模态框2-->
-<div class="modal fade" id="resume1" tabindex="-1" role="resume" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content" style="background: #e5e5e5">
+<!--1.功能modal--->
+
+<!--2.简历modal-->
+<div class="modal fade" id="resume1" tabindex="-1" role="resume" aria-hidden="true"  >
+    <div class="modal-dialog col-lg-offset-3"  >
+        <div class="modal-content" style="background: #e5e5e5;" >
             <div class="modal-body">
                 <button type="button" class="close m-r-n-sm m-t-n-md" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
@@ -2159,8 +2116,129 @@
     </div>
     <!-- /.modal-content -->
 </div>
-<!-- /.modal 2--->
-<!--模态框3-->
+<!--2.简历modal-->
+
+
+
+<!--3.试卷modal-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog  col-lg-offset-3"  style="width: 50%">
+        <section class="scrollable wrapper">
+            <section class="panel panel-default">
+                <header class="panel-heading">
+                    <div class="row">
+                        <span class="col-lg-4 m-t-sm m-b-sm h5 btn-function"><a href="hr后台-答题学生列表（答题中）.html" class=" btn-function">重新选择</a></span>
+                        <span class="col-lg-4 text-center h4 m-t-sm m-b-sm">IOS开发工程通用卷</span>
+                        <span class="col-lg-4 m-t-sm m-b-sm h5 text-right"><a href="#" class=" btn-function"  data-dismiss="modal" aria-label="Close">确定</a></span>
+                    </div>
+                </header>
+
+                <section class="scrollable wrapper">
+                    <div class="row" style="margin-top: -15px;">
+
+                        <table class="table table-bordered table-juestifice">
+                            <tr>
+                                <td>推荐时间：30分钟</td>
+                                <td>题目数</td>
+                                <td>属性：开发</td>
+                                <td>得分：222</td>
+                            </tr>
+                        </table>
+
+                        <div class="col-lg-12">
+                            <section class="blink panel panel-default">
+                                <div class="number panel-heading ">
+                                    <div style="width: 5px; height: 40px;background-color: #E65D17;display: inline;float: left;margin-right: 15px;"></div>
+                                    <h4>第一题（单选）</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <p>1.飞机上的黑匣子被安放在飞机上的哪个部位？</p>
+                                    <p>A．机头</p>
+                                    <p>B．机头</p>
+                                    <p>C．机头</p>
+                                    <p>D．机头</p>
+                                </div>
+                                <div class="panel-footer answer">
+                                    <p>正确答案：D</p>
+                                </div>
+                                <section>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <section class="blink panel panel-default">
+                                <div class="number panel-heading ">
+                                    <div style="width: 5px; height: 40px;background-color: #E65D17;display: inline;float: left;margin-right: 15px;"></div>
+                                    <h4>
+                                        第一题（单选）
+                                    </h4>
+                                </div>
+                                <div class="panel-body">
+                                    <p>1.飞机上的黑匣子被安放在飞机上的哪个部位？</p>
+                                    <p>A．机头</p>
+                                    <p>B．机头</p>
+                                    <p>C．机头</p>
+                                    <p>D．机头</p>
+                                </div>
+                                <div class="panel-footer answer">
+                                    <p>正确答案：D</p>
+                                </div>
+                                </section>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <section class="blink panel panel-default">
+                                <div class="number panel-heading ">
+                                    <div style="width: 5px; height: 40px;background-color: #E65D17;display: inline;float: left;margin-right: 15px;"></div>
+                                    <h4>
+                                        第一题（单选）
+                                    </h4>
+                                </div>
+                                <div class="panel-body">
+                                    <p>1.飞机上的黑匣子被安放在飞机上的哪个部位？</p>
+                                    <p>A．机头</p>
+                                    <p>B．机头</p>
+                                    <p>C．机头</p>
+                                    <p>D．机头</p>
+                                </div>
+                                <div class="panel-footer answer">
+                                    <p>正确答案：D</p>
+                                </div>
+                                </section>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <section class="blink panel panel-default">
+                                <div class="number panel-heading ">
+                                    <div style="width: 5px; height: 40px;background-color: #E65D17;display: inline;float: left;margin-right: 15px;"></div>
+                                    <h4>
+                                        第一题（单选）
+                                    </h4>
+                                </div>
+                                <div class="panel-body">
+                                    <p>1.飞机上的黑匣子被安放在飞机上的哪个部位？</p>
+                                    <p>A．机头</p>
+                                    <p>B．机头</p>
+                                    <p>C．机头</p>
+                                    <p>D．机头</p>
+                                </div>
+                                <div class="panel-footer answer">
+                                    <p>正确答案：D</p>
+                                </div>
+                                </section>
+                        </div>
+
+                    </div>
+                    </section>
+                        </section>
+                            </section>
+
+    </div>
+</div>
+<!--3.试卷modal-->
+
+
+
+<!--4.备注modal-->
 <div class="modal fade" id="remarks">
     <div class="modal-dialog">
         <div class="modal-content modal-content-custom">
@@ -2182,7 +2260,7 @@
     </div>
     <!-- /.modal-dialog -->
 </div>
-<!-- /.modal 3 -->
+<!--4.备注modal -->
 
 
 <!-- BEGIN MODAL -->
